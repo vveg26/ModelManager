@@ -1,0 +1,230 @@
+﻿using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.IO;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace ModelManager
+{
+    public partial class Form1 : Form
+    {
+
+        People people = new People();//一个人类
+        
+        
+        String path = @"C:\Work\Vs\Model\Info\info.txt";//保存到这个txt中
+        string SNpath =  "";
+        ArrayList arrys1 = new ArrayList();//设置一个字符串数组，用来保存panel_collection里面label和radbtn的值
+
+
+        public Form1()
+        {
+            InitializeComponent();
+            
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {   //判断所有txt都填写了
+            bool flag = true;
+            foreach (Control c in this.panel_info.Controls)
+            {
+                if (c is TextBox)
+                {
+                    if (string.IsNullOrEmpty((c as TextBox).Text))
+                    {
+                        
+                        flag = false;
+                        break;
+                    }
+                }
+            }
+            
+            if (flag||(!(pic_pic.Image==null)))
+            { 
+                SaveInfo();
+            }
+            else
+            {
+                MessageBox.Show("请填完所有信息后再提交");
+            }
+            
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            Init_UI();
+        }
+        //初始化界面UI
+        private void Init_UI()
+        {
+            //下拉框
+            comb_cardtype.Items.Add("身份证");
+            comb_cardtype.Items.Add("护照");
+            comb_cardtype.Items.Add("驾照");
+            comb_cardtype.SelectedIndex = 0;
+            //使能控制
+            btn_getSN.Enabled = false;
+            rabtn_wm.Checked = true;
+
+        }
+
+        //保存信息方法
+        private void SaveInfo()
+        {   
+            //封装进类
+            people.card_id = txt_cardid.Text;
+            people.name = txt_name.Text;
+            people.card_type = comb_cardtype.SelectedIndex;
+            if (rabtn_m.Checked) {people.gender = 1; } else { people.gender = 0; }   //判断是否为女性
+            people.pic = GetImageData(pic_pic.Image);
+            people.address = txt_address.Text;
+            people.contact = txt_contact.Text;
+            people.race = txt_race.Text;
+            people.SN = people.card_id + people.gender;//随机设置的，改动,作为模特的总地址
+
+            //将个人信息保存到txt文件
+            string str = "姓名:"+ people.name +"证件类型:"+ people.card_type +"证件号:" + people.card_id +"证件图片长度:"+ people.pic.Length + "地址:"+ people.address +"联系方式:"+ people.contact +"种族:"+ people.race +"标识码:"+ people.SN +"\r\n";//将信息组合成字符串            
+            if (!File.Exists(path)) { using (System.IO.FileStream fs = System.IO.File.Create(path)) ; }//createfile
+            StreamWriter sw = File.AppendText(path);
+            sw.Write(str);
+            sw.Close();
+            btn_getSN.Enabled = true;
+        }
+
+        //生成标识码路径
+        private void btn_getSN_Click(object sender, EventArgs e)
+        {   
+            string dirPath = @"C:\Work\Vs\Model\Info";
+            SNpath =  dirPath+ "\\"+people.SN;//标识码文件夹路径
+            if (!Directory.Exists(SNpath))
+                Directory.CreateDirectory(SNpath);
+            txt_getSN.Text = SNpath;
+        }
+        //选择图片按钮
+        private void btn_choosepic_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog fileDialog = new OpenFileDialog();
+            DialogResult result = fileDialog.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                this.pic_pic.Image = Image.FromFile(fileDialog.FileName);
+            }
+        }
+
+        //处理图片的方法
+        public byte[] GetImageData(Image imgPhoto)
+        {
+            //将Image转换成数据流，并保存为bety[]
+            MemoryStream mStreanm = new MemoryStream();
+            imgPhoto.Save(mStreanm, System.Drawing.Imaging.ImageFormat.Bmp);
+            byte[] byteData = new Byte[mStreanm.Length];
+            mStreanm.Position = 0;
+            mStreanm.Read(byteData, 0, byteData.Length);
+            mStreanm.Close();
+            return byteData;
+        }
+        public Image ByteToImage(byte[] streamByte)
+        {
+            MemoryStream mStream = new MemoryStream(streamByte);
+            return Image.FromStream(mStream);
+        }
+        //保存到json的按钮
+        private void btn_save_json_Click(object sender, EventArgs e)
+        {   
+            //组合成json
+            string json = "{";
+            GetKey(panel_collection);
+            int count = 1;
+            foreach(string arry in arrys1)
+            {   
+                if(count==arrys1.Count)
+                {
+                    json += arry;
+                }
+                else
+                {
+                    json += arry+",";
+                    count++;
+                }
+                
+            }
+            json = json + "}";
+            //如果有snpatj，写入到json文件中
+
+            if(!(SNpath == "")){                           
+            string jsonPath = SNpath + "\\" + "json.json";
+            if (!File.Exists(jsonPath)) { using (System.IO.FileStream fs = System.IO.File.Create(jsonPath)) ; }//createfile
+            StreamWriter sw = File.AppendText(jsonPath);
+            sw.Write(json);
+                sw.Close();
+            }
+            else
+            {
+                MessageBox.Show("没有模特");
+            }
+        }
+
+
+
+        //遍历panel中的groupbox中的radiobtn的值和对应的label的值
+        private  void GetKey(Panel panel)
+        {   
+            //遍历panel种的每一个组件
+            foreach (Control groupbox in panel.Controls)
+            {
+                
+                //如果是groupbox，则遍历groupbox的组件
+                if (groupbox is GroupBox)
+                {
+                    string str_radbtn = " ";//radbtn值
+                    string str_lbl = " ";//label值
+                   
+                   // GroupBox grbox = groupbox as GroupBox;
+                    foreach(Control con in groupbox.Controls)
+                    {   
+                        //如果控件为lbl，则取出lbl的值
+                        if (con is Label)
+                        {
+                            Label lbl = con as Label;
+                            str_lbl = lbl.Text;
+                        }else if(con is RadioButton)
+                        //如果控件为radbtn。取出选中的radbtn的值
+                        
+                        {
+                            RadioButton radbtn = con as RadioButton;
+                            if (radbtn.Checked)
+                            {
+                                str_radbtn = radbtn.Text;
+                                //组合字符串到数组中,key----value
+                                string str= "\"" + str_lbl + "\"" + "" + ":" + "\"" + str_radbtn + "\"";
+                                arrys1.Add(str);
+                            }
+                        }
+
+                        
+
+                    }
+                }
+            }
+
+
+
+
+        }
+        //创建一个lbl
+        //private void btn_create_line_Click(object sender, EventArgs e)
+        //{
+        //    Label lbl = new Label();//声明一个label
+        //    lbl.Location = new System.Drawing.Point(5, 80);//设置位置
+        //    lbl.Size = new Size(40, 20);//设置大小
+        //    lbl.Text = txt_create_lal.Text;//设置Text值
+        //    this.panel_collection.Controls.Add(lbl);//在当前窗体上添加这个label控件
+        //}
+    }
+}
