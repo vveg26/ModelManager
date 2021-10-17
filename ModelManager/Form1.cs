@@ -15,20 +15,19 @@ namespace ModelManager
     public partial class Form1 : Form
     {
 
-        People people = new People();//一个人类
-        
-        
-        String path = @"C:\Work\Vs\Model\Info\info.txt";//保存到这个txt中
-        string SNpath =  "";
-        ArrayList arrys1 = new ArrayList();//设置一个字符串数组，用来保存panel_collection里面label和radbtn的值
+        People people = new People();//定义一个模特类
+
+
+        string path = @"C:\Work\Vs\Model\Info\info.txt";//定义一个保存模特信息的地址
+        string SNpath = "";//定义一个标识码地址       
 
 
         public Form1()
         {
             InitializeComponent();
-            
-        }
 
+        }
+        //保存模特信息
         private void btn_save_Click(object sender, EventArgs e)
         {   //判断所有txt都填写了
             bool flag = true;
@@ -38,22 +37,22 @@ namespace ModelManager
                 {
                     if (string.IsNullOrEmpty((c as TextBox).Text))
                     {
-                        
+
                         flag = false;
                         break;
                     }
                 }
             }
-            
-            if (flag||(!(pic_pic.Image==null)))
-            { 
+
+            if (flag || (!(pic_pic.Image == null)))
+            {
                 SaveInfo();
             }
             else
             {
                 MessageBox.Show("请填完所有信息后再提交");
             }
-            
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -74,14 +73,16 @@ namespace ModelManager
 
         }
 
-        //保存信息方法
+        /// <summary>
+        /// 保存模特信息
+        /// </summary>
         private void SaveInfo()
-        {   
+        {
             //封装进类
             people.card_id = txt_cardid.Text;
             people.name = txt_name.Text;
             people.card_type = comb_cardtype.SelectedIndex;
-            if (rabtn_m.Checked) {people.gender = 1; } else { people.gender = 0; }   //判断是否为女性
+            if (rabtn_m.Checked) { people.gender = 1; } else { people.gender = 0; }   //判断是否为女性
             people.pic = GetImageData(pic_pic.Image);
             people.address = txt_address.Text;
             people.contact = txt_contact.Text;
@@ -89,7 +90,7 @@ namespace ModelManager
             people.SN = people.card_id + people.gender;//随机设置的，改动,作为模特的总地址
 
             //将个人信息保存到txt文件
-            string str = "姓名:"+ people.name +"证件类型:"+ people.card_type +"证件号:" + people.card_id +"证件图片长度:"+ people.pic.Length + "地址:"+ people.address +"联系方式:"+ people.contact +"种族:"+ people.race +"标识码:"+ people.SN +"\r\n";//将信息组合成字符串            
+            string str = "姓名:" + people.name + "证件类型:" + people.card_type + "证件号:" + people.card_id + "证件图片长度:" + people.pic.Length + "地址:" + people.address + "联系方式:" + people.contact + "种族:" + people.race + "标识码:" + people.SN + "\r\n";//将信息组合成字符串            
             if (!File.Exists(path)) { using (System.IO.FileStream fs = System.IO.File.Create(path)) ; }//createfile
             StreamWriter sw = File.AppendText(path);
             sw.Write(str);
@@ -99,9 +100,9 @@ namespace ModelManager
 
         //生成标识码路径
         private void btn_getSN_Click(object sender, EventArgs e)
-        {   
+        {
             string dirPath = @"C:\Work\Vs\Model\Info";
-            SNpath =  dirPath+ "\\"+people.SN;//标识码文件夹路径
+            SNpath = dirPath + "\\" + people.SN;//标识码文件夹路径
             if (!Directory.Exists(SNpath))
                 Directory.CreateDirectory(SNpath);
             txt_getSN.Text = SNpath;
@@ -136,32 +137,18 @@ namespace ModelManager
         }
         //保存到json的按钮
         private void btn_save_json_Click(object sender, EventArgs e)
-        {   
+        {
             //组合成json
-            string json = "{";
-            GetKey(panel_collection);
-            int count = 1;
-            foreach(string arry in arrys1)
-            {   
-                if(count==arrys1.Count)
-                {
-                    json += arry;
-                }
-                else
-                {
-                    json += arry+",";
-                    count++;
-                }
-                
-            }
-            json = json + "}";
-            //如果有snpatj，写入到json文件中
 
-            if(!(SNpath == "")){                           
-            string jsonPath = SNpath + "\\" + "json.json";
-            if (!File.Exists(jsonPath)) { using (System.IO.FileStream fs = System.IO.File.Create(jsonPath)) ; }//createfile
-            StreamWriter sw = File.AppendText(jsonPath);
-            sw.Write(json);
+            string json = ToJson(panel_collection);
+
+            //如果有模特标识码，写入到json文件中
+            if (!(SNpath == ""))
+            {
+                string jsonPath = SNpath + "\\" + "json.json";
+                if (!File.Exists(jsonPath)) { using (System.IO.FileStream fs = System.IO.File.Create(jsonPath)) ; }//createfile
+                StreamWriter sw = File.AppendText(jsonPath);
+                sw.Write(json);
                 sw.Close();
             }
             else
@@ -169,51 +156,70 @@ namespace ModelManager
                 MessageBox.Show("没有模特");
             }
         }
-
-
-
-        //遍历panel中的groupbox中的radiobtn的值和对应的label的值
-        private  void GetKey(Panel panel)
-        {   
+        /// <summary>
+        /// 遍历panel中的groupbox中的radiobtn的值和对应的label的值，转换成json格式
+        /// </summary>
+        /// <param name="panel">板子，里面有groupbox和label</param>
+        private string ToJson(Panel panel)
+        {
+            ArrayList arrys = new ArrayList();
+            string json = "{";
             //遍历panel种的每一个组件
             foreach (Control groupbox in panel.Controls)
             {
-                
+
                 //如果是groupbox，则遍历groupbox的组件
                 if (groupbox is GroupBox)
                 {
                     string str_radbtn = " ";//radbtn值
                     string str_lbl = " ";//label值
-                   
-                   // GroupBox grbox = groupbox as GroupBox;
-                    foreach(Control con in groupbox.Controls)
-                    {   
+
+                    // GroupBox grbox = groupbox as GroupBox;
+                    foreach (Control con in groupbox.Controls)
+                    {
                         //如果控件为lbl，则取出lbl的值
                         if (con is Label)
                         {
                             Label lbl = con as Label;
                             str_lbl = lbl.Text;
-                        }else if(con is RadioButton)
+                        }
+                        else if (con is RadioButton)
                         //如果控件为radbtn。取出选中的radbtn的值
-                        
+
                         {
                             RadioButton radbtn = con as RadioButton;
                             if (radbtn.Checked)
                             {
                                 str_radbtn = radbtn.Text;
                                 //组合字符串到数组中,key----value
-                                string str= "\"" + str_lbl + "\"" + "" + ":" + "\"" + str_radbtn + "\"";
-                                arrys1.Add(str);
+                                string str = "\"" + str_lbl + "\"" + "" + ":" + "\"" + str_radbtn + "\"";
+                                arrys.Add(str);
                             }
                         }
 
-                        
+
+
 
                     }
                 }
             }
+            //将字符串取出组合成json格式
+            int count = 1;
+            foreach (string arry in arrys)
+            {
+                if (count == arrys.Count)
+                {
+                    json += arry;
+                }
+                else
+                {
+                    json += arry + ",";
+                    count++;
+                }
 
-
+            }
+            json +=  "}";
+            return json;
 
 
         }

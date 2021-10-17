@@ -8,3 +8,13 @@ C:\Work\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.csproj.GenerateResou
 C:\Work\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.csproj.CoreCompileInputs.cache
 C:\Work\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.exe
 C:\Work\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.pdb
+C:\Code\GitStore\Vs\ModelManager\ModelManager\bin\Debug\ModelManager.exe.config
+C:\Code\GitStore\Vs\ModelManager\ModelManager\bin\Debug\ModelManager.exe
+C:\Code\GitStore\Vs\ModelManager\ModelManager\bin\Debug\ModelManager.pdb
+C:\Code\GitStore\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.csproj.AssemblyReference.cache
+C:\Code\GitStore\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.Form1.resources
+C:\Code\GitStore\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.Properties.Resources.resources
+C:\Code\GitStore\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.csproj.GenerateResource.cache
+C:\Code\GitStore\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.csproj.CoreCompileInputs.cache
+C:\Code\GitStore\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.exe
+C:\Code\GitStore\Vs\ModelManager\ModelManager\obj\Debug\ModelManager.pdb
