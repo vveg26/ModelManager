@@ -17,9 +17,8 @@ namespace ModelManager
 
         People people = new People();//定义一个模特类
 
-
-        string path = @"C:\Work\Vs\Model\Info\info.txt";//定义一个保存模特信息的地址
-        string SNpath = "";//定义一个标识码地址       
+        string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)+"\\"+"Model"+"\\"+"info.txt";//保存模特信息的地址,需要存在
+        string SNpath = "";//定义一个标识码地址  ，这个地址也要真实存在     
 
 
         public Form1()
@@ -78,7 +77,7 @@ namespace ModelManager
         /// </summary>
         private void SaveInfo()
         {
-            //封装进类
+            //封装进模特类
             people.card_id = txt_cardid.Text;
             people.name = txt_name.Text;
             people.card_type = comb_cardtype.SelectedIndex;
@@ -91,7 +90,8 @@ namespace ModelManager
 
             //将个人信息保存到txt文件
             string str = "姓名:" + people.name + "证件类型:" + people.card_type + "证件号:" + people.card_id + "证件图片长度:" + people.pic.Length + "地址:" + people.address + "联系方式:" + people.contact + "种族:" + people.race + "标识码:" + people.SN + "\r\n";//将信息组合成字符串            
-            if (!File.Exists(path)) { using (System.IO.FileStream fs = System.IO.File.Create(path)) ; }//createfile
+            //如果文件不存在，就保存
+            if (!File.Exists(path)) { using (System.IO.FileStream fs = System.IO.File.Create(path)) ; }//创建文件
             StreamWriter sw = File.AppendText(path);
             sw.Write(str);
             sw.Close();
@@ -101,7 +101,8 @@ namespace ModelManager
         //生成标识码路径
         private void btn_getSN_Click(object sender, EventArgs e)
         {
-            string dirPath = @"C:\Work\Vs\Model\Info";
+            string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)+"\\"+"Model";//文件保存目录
+
             SNpath = dirPath + "\\" + people.SN;//标识码文件夹路径
             if (!Directory.Exists(SNpath))
                 Directory.CreateDirectory(SNpath);
