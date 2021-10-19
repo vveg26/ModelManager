@@ -354,7 +354,7 @@ namespace ModelManager
             // 
             // btn_getSN
             // 
-            this.btn_getSN.Location = new System.Drawing.Point(0, 403);
+            this.btn_getSN.Location = new System.Drawing.Point(11, 425);
             this.btn_getSN.Margin = new System.Windows.Forms.Padding(2);
             this.btn_getSN.Name = "btn_getSN";
             this.btn_getSN.Size = new System.Drawing.Size(83, 24);
@@ -365,7 +365,7 @@ namespace ModelManager
             // 
             // txt_getSN
             // 
-            this.txt_getSN.Location = new System.Drawing.Point(94, 406);
+            this.txt_getSN.Location = new System.Drawing.Point(106, 425);
             this.txt_getSN.Margin = new System.Windows.Forms.Padding(2);
             this.txt_getSN.Name = "txt_getSN";
             this.txt_getSN.Size = new System.Drawing.Size(159, 21);
@@ -413,9 +413,7 @@ namespace ModelManager
             this.panel_info.Controls.Add(this.comb_cardtype);
             this.panel_info.Controls.Add(this.btn_choosepic);
             this.panel_info.Controls.Add(this.lbl_name);
-            this.panel_info.Controls.Add(this.txt_getSN);
             this.panel_info.Controls.Add(this.lbl_gender);
-            this.panel_info.Controls.Add(this.btn_getSN);
             this.panel_info.Controls.Add(this.lbl_cardid);
             this.panel_info.Controls.Add(this.rabtn_wm);
             this.panel_info.Controls.Add(this.lbl_pic);
@@ -431,10 +429,10 @@ namespace ModelManager
             this.panel_info.Controls.Add(this.label3);
             this.panel_info.Controls.Add(this.label5);
             this.panel_info.Controls.Add(this.label4);
-            this.panel_info.Location = new System.Drawing.Point(9, 9);
+            this.panel_info.Location = new System.Drawing.Point(11, 9);
             this.panel_info.Margin = new System.Windows.Forms.Padding(2);
             this.panel_info.Name = "panel_info";
-            this.panel_info.Size = new System.Drawing.Size(299, 515);
+            this.panel_info.Size = new System.Drawing.Size(297, 394);
             this.panel_info.TabIndex = 30;
             // 
             // panel_collection
@@ -1340,6 +1338,8 @@ namespace ModelManager
             this.ClientSize = new System.Drawing.Size(794, 533);
             this.Controls.Add(this.panel_collection);
             this.Controls.Add(this.panel_info);
+            this.Controls.Add(this.btn_getSN);
+            this.Controls.Add(this.txt_getSN);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "模特管理系统";
@@ -1374,6 +1374,7 @@ namespace ModelManager
             this.group_skin.ResumeLayout(false);
             this.group_skin.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

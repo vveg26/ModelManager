@@ -28,9 +28,14 @@ namespace ModelManager
         }
         //保存模特信息
         private void btn_save_Click(object sender, EventArgs e)
-        {   //判断所有txt都填写了
+        {
+            TextBoxIsNull(this.panel_info);
+        }
+        private void TextBoxIsNull(Panel panel)
+        {
+            //判断所有txt都填写了
             bool flag = true;
-            foreach (Control c in this.panel_info.Controls)
+            foreach (Control c in panel.Controls)
             {
                 if (c is TextBox)
                 {
@@ -43,17 +48,15 @@ namespace ModelManager
                 }
             }
 
-            if (flag || (!(pic_pic.Image == null)))
-            {
-                SaveInfo();
-            }
-            else
+            if ((flag==false) || ((pic_pic.Image == null)))
             {
                 MessageBox.Show("请填完所有信息后再提交");
             }
-
+            else
+            {
+                SaveInfo();
+            }
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             Init_UI();

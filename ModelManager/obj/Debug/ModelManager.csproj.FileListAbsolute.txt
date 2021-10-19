@@ -28,3 +28,13 @@ D:\Users\Desktop\GitStore\ModelManager\ModelManager\obj\Debug\ModelManager.cspro
 D:\Users\Desktop\GitStore\ModelManager\ModelManager\obj\Debug\ModelManager.csproj.CoreCompileInputs.cache
 D:\Users\Desktop\GitStore\ModelManager\ModelManager\obj\Debug\ModelManager.exe
 D:\Users\Desktop\GitStore\ModelManager\ModelManager\obj\Debug\ModelManager.pdb
+D:\Users\Desktop\git\Model\ModelManager\bin\Debug\ModelManager.exe.config
+D:\Users\Desktop\git\Model\ModelManager\bin\Debug\ModelManager.exe
+D:\Users\Desktop\git\Model\ModelManager\bin\Debug\ModelManager.pdb
+D:\Users\Desktop\git\Model\ModelManager\obj\Debug\ModelManager.csproj.AssemblyReference.cache
+D:\Users\Desktop\git\Model\ModelManager\obj\Debug\ModelManager.Form1.resources
+D:\Users\Desktop\git\Model\ModelManager\obj\Debug\ModelManager.Properties.Resources.resources
+D:\Users\Desktop\git\Model\ModelManager\obj\Debug\ModelManager.csproj.GenerateResource.cache
+D:\Users\Desktop\git\Model\ModelManager\obj\Debug\ModelManager.csproj.CoreCompileInputs.cache
+D:\Users\Desktop\git\Model\ModelManager\obj\Debug\ModelManager.exe
+D:\Users\Desktop\git\Model\ModelManager\obj\Debug\ModelManager.pdb
