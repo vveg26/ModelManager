@@ -33,6 +33,10 @@ namespace ModelManager
             this.btn_update = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btn_find = new System.Windows.Forms.Button();
+            this.btn_del = new System.Windows.Forms.Button();
+            this.txt_find = new System.Windows.Forms.TextBox();
+            this.txt_del = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,11 +80,49 @@ namespace ModelManager
             this.label2.TabIndex = 3;
             this.label2.Text = "全部模特信息";
             // 
+            // btn_find
+            // 
+            this.btn_find.Location = new System.Drawing.Point(236, 442);
+            this.btn_find.Name = "btn_find";
+            this.btn_find.Size = new System.Drawing.Size(159, 54);
+            this.btn_find.TabIndex = 4;
+            this.btn_find.Text = "查询";
+            this.btn_find.UseVisualStyleBackColor = true;
+            this.btn_find.Click += new System.EventHandler(this.btn_find_Click);
+            // 
+            // btn_del
+            // 
+            this.btn_del.Location = new System.Drawing.Point(650, 442);
+            this.btn_del.Name = "btn_del";
+            this.btn_del.Size = new System.Drawing.Size(124, 54);
+            this.btn_del.TabIndex = 5;
+            this.btn_del.Text = "删除";
+            this.btn_del.UseVisualStyleBackColor = true;
+            this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
+            // 
+            // txt_find
+            // 
+            this.txt_find.Location = new System.Drawing.Point(415, 460);
+            this.txt_find.Name = "txt_find";
+            this.txt_find.Size = new System.Drawing.Size(129, 22);
+            this.txt_find.TabIndex = 6;
+            // 
+            // txt_del
+            // 
+            this.txt_del.Location = new System.Drawing.Point(820, 459);
+            this.txt_del.Name = "txt_del";
+            this.txt_del.Size = new System.Drawing.Size(107, 22);
+            this.txt_del.TabIndex = 7;
+            // 
             // ShowInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 540);
+            this.Controls.Add(this.txt_del);
+            this.Controls.Add(this.txt_find);
+            this.Controls.Add(this.btn_del);
+            this.Controls.Add(this.btn_find);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_update);
@@ -101,5 +143,9 @@ namespace ModelManager
         private System.Windows.Forms.Button btn_update;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btn_find;
+        private System.Windows.Forms.Button btn_del;
+        private System.Windows.Forms.TextBox txt_find;
+        private System.Windows.Forms.TextBox txt_del;
     }
 }

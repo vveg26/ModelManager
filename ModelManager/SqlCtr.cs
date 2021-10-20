@@ -68,35 +68,40 @@ namespace ModelManager
             {
                 conn.Close();//关闭通道
             }
-            return ds;//存在错误
+            return ds;
         }
 
 
             //查单个
-        public void SqlFindByID()
+        public DataSet SqlFindByName(string name)
         {
             MySqlConnection conn = this.SqlConn();
+            DataSet ds = new DataSet();
             try
             {
 
                 conn.Open();//建立连接，可能出现异常,使用try catch语句
-                string SqlStr = "select * from student";
+                string SqlStr = "select id,name,card_type,card_id,gender,address,contact,race,SN from model_info where name = "+name+" ";
                 MySqlCommand cmd = new MySqlCommand(SqlStr, conn);
-                MySqlDataReader DataReader = cmd.ExecuteReader();
-                while (DataReader.Read())
-                {
-                    Console.WriteLine(DataReader.GetString("StuName") + "\t" + DataReader.GetString("StuNo") + "\t"
-                       + "\t" + DataReader.GetString("Age"));//"userid"是数据库对应的列名，推荐这种方式
-                }
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);//将返回的数据封装进adaper              
+                adap.Fill(ds);
+
             }
             catch (MySqlException exe)
             {
                 Console.WriteLine(exe.Message);//有错则报出错误
+
             }
             finally
             {
                 conn.Close();//关闭通道
             }
+            return ds;
+        }
+
+        public void DelById(int id)
+        {
+
         }
 
 

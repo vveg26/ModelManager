@@ -375,7 +375,7 @@ namespace ModelManager
             this.btn_find.Name = "btn_find";
             this.btn_find.Size = new System.Drawing.Size(149, 29);
             this.btn_find.TabIndex = 29;
-            this.btn_find.Text = "查询所有模特";
+            this.btn_find.Text = "模特信息操作";
             this.btn_find.UseVisualStyleBackColor = true;
             this.btn_find.Click += new System.EventHandler(this.btn_find_Click);
             // 
