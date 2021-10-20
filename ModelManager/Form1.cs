@@ -243,21 +243,18 @@ namespace ModelManager
 
         }
         /// <summary>
-        /// Mysql的链接
+        /// 弹出窗口
         /// </summary>
-        private void MysqlConn(String str)
+        private void ShowFrom(ShowInfo f2)
         {
-
+            f2.Visible = false;//将当前窗口设置为不可视；如果不这样处理则系统报错。
+            f2.ShowDialog();//打开窗口
         }
 
         private void btn_find_Click(object sender, EventArgs e)
         {
-          
-            ShowInfo f2 = new ShowInfo();//首先将另一个窗口Form2实例化
-            f2.Visible = false;//将当前窗口设置为不可视；如果不这样处理则系统报错。
-            f2.ShowDialog();//打开窗口
-
-
+            ShowInfo f2 = new ShowInfo();
+            ShowFrom(f2);
         }
 
         private void btn_update_Click(object sender, EventArgs e)
