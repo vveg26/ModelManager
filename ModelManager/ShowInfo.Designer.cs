@@ -43,6 +43,8 @@ namespace ModelManager
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(1304, 372);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellValueChanged += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellValueChanged);//当DataGridView中的值变化时，就监听
+                
             // 
             // btn_update
             // 

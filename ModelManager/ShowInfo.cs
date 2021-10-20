@@ -19,17 +19,32 @@ namespace ModelManager
         }
 
         private void ShowInfo_Load(object sender, EventArgs e)
-        {
-            SqlCtr sql = new SqlCtr();       
-            //this.dataGridView1.ReadOnly = true;
-            dataGridView1.AutoGenerateColumns = true;
-            this.dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter; //单击
-            this.dataGridView1.DataSource = sql.SqlFindAll().Tables[0].DefaultView;//存在图片流无法显示的问题
+        {   
+            SqlCtr sql = new SqlCtr();
+            this.dataGridView1.ReadOnly = true;
+            dataGridView1.AutoGenerateColumns = true;//自动生成列表
+            this.dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter; //设置输入后回车完成
+            this.dataGridView1.DataSource = sql.SqlFindAll().Tables[0].DefaultView;//存在图片流无法显示的问题？
         }
 
         private void btn_update_Click(object sender, EventArgs e)
         {
-            
+            Lock_Data();
+        }
+        /// <summary>
+        /// 修改按钮变化方法
+        /// </summary>
+        public void Lock_Data()
+        {
+            this.dataGridView1.ReadOnly = !this.dataGridView1.ReadOnly;
+            if (this.dataGridView1.ReadOnly) 
+            {
+                this.btn_update.Text = "修改信息";
+            }
+            else
+            {
+                this.btn_update.Text = "预览信息";
+            }
         }
         //修改单元格就修改数据库
         private void dataGridView1_CellValueChanged(object sender, DataGridViewCellEventArgs e)
