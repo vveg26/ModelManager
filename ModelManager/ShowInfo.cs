@@ -40,10 +40,12 @@ namespace ModelManager
             if (this.dataGridView1.ReadOnly) 
             {
                 this.btn_update.Text = "修改信息";
+                this.label1.Text = "请点击按钮，直接在列表中预览模特信息";
             }
             else
             {
                 this.btn_update.Text = "预览信息";
+                this.label1.Text = "请点击按钮，直接在列表中修改模特信息";
             }
         }
         //修改单元格就修改数据库
@@ -57,9 +59,9 @@ namespace ModelManager
                 string strrow = dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();//获取焦点触发行的第一个值
                 string value = dataGridView1.CurrentCell.Value.ToString();//获取当前点击的活动单元格的值
                 string strcomm = "update model_info set " + strcolumn + "='" + value + "'where id = " + strrow;
-                //update FilTer set 列名 = value where id = 3
+                //update model_info set 列名 = value where id = 3
                 conn.Open();
-                this.label1.Text = strcomm;
+                
                 MySqlCommand comm = new MySqlCommand(strcomm, conn);
                 comm.ExecuteNonQuery();
             }
