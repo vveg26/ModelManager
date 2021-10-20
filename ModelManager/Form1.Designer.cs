@@ -150,10 +150,9 @@ namespace ModelManager
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(-1, 2);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(-1, 3);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 22);
+            this.label1.Size = new System.Drawing.Size(92, 27);
             this.label1.TabIndex = 0;
             this.label1.Text = "证件信息";
             // 
@@ -161,10 +160,9 @@ namespace ModelManager
             // 
             this.lbl_cardtype.AutoSize = true;
             this.lbl_cardtype.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cardtype.Location = new System.Drawing.Point(2, 34);
-            this.lbl_cardtype.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_cardtype.Location = new System.Drawing.Point(3, 45);
             this.lbl_cardtype.Name = "lbl_cardtype";
-            this.lbl_cardtype.Size = new System.Drawing.Size(72, 13);
+            this.lbl_cardtype.Size = new System.Drawing.Size(83, 17);
             this.lbl_cardtype.TabIndex = 1;
             this.lbl_cardtype.Text = "证件类型：";
             // 
@@ -172,20 +170,18 @@ namespace ModelManager
             // 
             this.comb_cardtype.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comb_cardtype.FormattingEnabled = true;
-            this.comb_cardtype.Location = new System.Drawing.Point(78, 32);
-            this.comb_cardtype.Margin = new System.Windows.Forms.Padding(2);
+            this.comb_cardtype.Location = new System.Drawing.Point(104, 43);
             this.comb_cardtype.Name = "comb_cardtype";
-            this.comb_cardtype.Size = new System.Drawing.Size(92, 20);
+            this.comb_cardtype.Size = new System.Drawing.Size(121, 24);
             this.comb_cardtype.TabIndex = 2;
             // 
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
             this.lbl_name.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(2, 60);
-            this.lbl_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_name.Location = new System.Drawing.Point(3, 80);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(46, 13);
+            this.lbl_name.Size = new System.Drawing.Size(53, 17);
             this.lbl_name.TabIndex = 3;
             this.lbl_name.Text = "姓名：";
             // 
@@ -193,10 +189,9 @@ namespace ModelManager
             // 
             this.lbl_gender.AutoSize = true;
             this.lbl_gender.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_gender.Location = new System.Drawing.Point(2, 82);
-            this.lbl_gender.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_gender.Location = new System.Drawing.Point(3, 109);
             this.lbl_gender.Name = "lbl_gender";
-            this.lbl_gender.Size = new System.Drawing.Size(46, 13);
+            this.lbl_gender.Size = new System.Drawing.Size(53, 17);
             this.lbl_gender.TabIndex = 4;
             this.lbl_gender.Text = "性别：";
             // 
@@ -204,10 +199,9 @@ namespace ModelManager
             // 
             this.lbl_cardid.AutoSize = true;
             this.lbl_cardid.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_cardid.Location = new System.Drawing.Point(2, 106);
-            this.lbl_cardid.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_cardid.Location = new System.Drawing.Point(3, 141);
             this.lbl_cardid.Name = "lbl_cardid";
-            this.lbl_cardid.Size = new System.Drawing.Size(59, 13);
+            this.lbl_cardid.Size = new System.Drawing.Size(68, 17);
             this.lbl_cardid.TabIndex = 5;
             this.lbl_cardid.Text = "证件号：";
             // 
@@ -215,36 +209,32 @@ namespace ModelManager
             // 
             this.lbl_pic.AutoSize = true;
             this.lbl_pic.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_pic.Location = new System.Drawing.Point(2, 130);
-            this.lbl_pic.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_pic.Location = new System.Drawing.Point(3, 173);
             this.lbl_pic.Name = "lbl_pic";
-            this.lbl_pic.Size = new System.Drawing.Size(72, 13);
+            this.lbl_pic.Size = new System.Drawing.Size(83, 17);
             this.lbl_pic.TabIndex = 6;
             this.lbl_pic.Text = "证件图片：";
             this.lbl_pic.TextAlign = System.Drawing.ContentAlignment.BottomRight;
             // 
             // txt_name
             // 
-            this.txt_name.Location = new System.Drawing.Point(78, 60);
-            this.txt_name.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_name.Location = new System.Drawing.Point(104, 80);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(70, 21);
+            this.txt_name.Size = new System.Drawing.Size(92, 22);
             this.txt_name.TabIndex = 7;
             // 
             // txt_cardid
             // 
-            this.txt_cardid.Location = new System.Drawing.Point(78, 106);
-            this.txt_cardid.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_cardid.Location = new System.Drawing.Point(104, 141);
             this.txt_cardid.Name = "txt_cardid";
-            this.txt_cardid.Size = new System.Drawing.Size(177, 21);
+            this.txt_cardid.Size = new System.Drawing.Size(235, 22);
             this.txt_cardid.TabIndex = 8;
             // 
             // pic_pic
             // 
-            this.pic_pic.Location = new System.Drawing.Point(79, 131);
-            this.pic_pic.Margin = new System.Windows.Forms.Padding(2);
+            this.pic_pic.Location = new System.Drawing.Point(105, 175);
             this.pic_pic.Name = "pic_pic";
-            this.pic_pic.Size = new System.Drawing.Size(141, 82);
+            this.pic_pic.Size = new System.Drawing.Size(188, 109);
             this.pic_pic.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_pic.TabIndex = 12;
             this.pic_pic.TabStop = false;
@@ -253,10 +243,9 @@ namespace ModelManager
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(2, 227);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Location = new System.Drawing.Point(3, 303);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 13);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 13;
             this.label2.Text = "扩展属性";
             // 
@@ -264,10 +253,9 @@ namespace ModelManager
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(2, 286);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Location = new System.Drawing.Point(3, 381);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 13);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 14;
             this.label3.Text = "通讯方式";
             // 
@@ -275,10 +263,9 @@ namespace ModelManager
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(14, 250);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Location = new System.Drawing.Point(6, 334);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(33, 13);
+            this.label4.Size = new System.Drawing.Size(38, 17);
             this.label4.TabIndex = 15;
             this.label4.Text = "种族";
             // 
@@ -286,43 +273,38 @@ namespace ModelManager
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(2, 316);
-            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Location = new System.Drawing.Point(3, 421);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(59, 13);
+            this.label5.Size = new System.Drawing.Size(68, 17);
             this.label5.TabIndex = 16;
             this.label5.Text = "通讯地址";
             // 
             // txt_contact
             // 
-            this.txt_contact.Location = new System.Drawing.Point(80, 284);
-            this.txt_contact.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_contact.Location = new System.Drawing.Point(107, 379);
             this.txt_contact.Name = "txt_contact";
-            this.txt_contact.Size = new System.Drawing.Size(177, 21);
+            this.txt_contact.Size = new System.Drawing.Size(235, 22);
             this.txt_contact.TabIndex = 17;
             // 
             // txt_race
             // 
-            this.txt_race.Location = new System.Drawing.Point(80, 248);
-            this.txt_race.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_race.Location = new System.Drawing.Point(107, 331);
             this.txt_race.Name = "txt_race";
-            this.txt_race.Size = new System.Drawing.Size(70, 21);
+            this.txt_race.Size = new System.Drawing.Size(92, 22);
             this.txt_race.TabIndex = 18;
             // 
             // txt_address
             // 
-            this.txt_address.Location = new System.Drawing.Point(79, 314);
-            this.txt_address.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_address.Location = new System.Drawing.Point(105, 419);
             this.txt_address.Name = "txt_address";
-            this.txt_address.Size = new System.Drawing.Size(177, 21);
+            this.txt_address.Size = new System.Drawing.Size(235, 22);
             this.txt_address.TabIndex = 19;
             // 
             // btn_save
             // 
-            this.btn_save.Location = new System.Drawing.Point(7, 348);
-            this.btn_save.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_save.Location = new System.Drawing.Point(9, 464);
             this.btn_save.Name = "btn_save";
-            this.btn_save.Size = new System.Drawing.Size(76, 23);
+            this.btn_save.Size = new System.Drawing.Size(101, 31);
             this.btn_save.TabIndex = 20;
             this.btn_save.Text = "保存信息";
             this.btn_save.UseVisualStyleBackColor = true;
@@ -331,10 +313,9 @@ namespace ModelManager
             // rabtn_m
             // 
             this.rabtn_m.AutoSize = true;
-            this.rabtn_m.Location = new System.Drawing.Point(78, 82);
-            this.rabtn_m.Margin = new System.Windows.Forms.Padding(2);
+            this.rabtn_m.Location = new System.Drawing.Point(104, 109);
             this.rabtn_m.Name = "rabtn_m";
-            this.rabtn_m.Size = new System.Drawing.Size(35, 16);
+            this.rabtn_m.Size = new System.Drawing.Size(43, 21);
             this.rabtn_m.TabIndex = 21;
             this.rabtn_m.TabStop = true;
             this.rabtn_m.Text = "男";
@@ -343,10 +324,9 @@ namespace ModelManager
             // rabtn_wm
             // 
             this.rabtn_wm.AutoSize = true;
-            this.rabtn_wm.Location = new System.Drawing.Point(115, 82);
-            this.rabtn_wm.Margin = new System.Windows.Forms.Padding(2);
+            this.rabtn_wm.Location = new System.Drawing.Point(153, 109);
             this.rabtn_wm.Name = "rabtn_wm";
-            this.rabtn_wm.Size = new System.Drawing.Size(35, 16);
+            this.rabtn_wm.Size = new System.Drawing.Size(43, 21);
             this.rabtn_wm.TabIndex = 22;
             this.rabtn_wm.TabStop = true;
             this.rabtn_wm.Text = "女";
@@ -354,10 +334,9 @@ namespace ModelManager
             // 
             // btn_getSN
             // 
-            this.btn_getSN.Location = new System.Drawing.Point(11, 425);
-            this.btn_getSN.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_getSN.Location = new System.Drawing.Point(15, 567);
             this.btn_getSN.Name = "btn_getSN";
-            this.btn_getSN.Size = new System.Drawing.Size(83, 24);
+            this.btn_getSN.Size = new System.Drawing.Size(111, 32);
             this.btn_getSN.TabIndex = 23;
             this.btn_getSN.Text = "生成路径";
             this.btn_getSN.UseVisualStyleBackColor = true;
@@ -365,18 +344,16 @@ namespace ModelManager
             // 
             // txt_getSN
             // 
-            this.txt_getSN.Location = new System.Drawing.Point(106, 425);
-            this.txt_getSN.Margin = new System.Windows.Forms.Padding(2);
+            this.txt_getSN.Location = new System.Drawing.Point(132, 572);
             this.txt_getSN.Name = "txt_getSN";
-            this.txt_getSN.Size = new System.Drawing.Size(159, 21);
+            this.txt_getSN.Size = new System.Drawing.Size(211, 22);
             this.txt_getSN.TabIndex = 24;
             // 
             // btn_choosepic
             // 
-            this.btn_choosepic.Location = new System.Drawing.Point(224, 186);
-            this.btn_choosepic.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_choosepic.Location = new System.Drawing.Point(299, 248);
             this.btn_choosepic.Name = "btn_choosepic";
-            this.btn_choosepic.Size = new System.Drawing.Size(71, 27);
+            this.btn_choosepic.Size = new System.Drawing.Size(95, 36);
             this.btn_choosepic.TabIndex = 27;
             this.btn_choosepic.Text = "选择图片";
             this.btn_choosepic.UseVisualStyleBackColor = true;
@@ -384,23 +361,23 @@ namespace ModelManager
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(94, 349);
-            this.btn_update.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_update.Location = new System.Drawing.Point(125, 465);
             this.btn_update.Name = "btn_update";
-            this.btn_update.Size = new System.Drawing.Size(56, 22);
+            this.btn_update.Size = new System.Drawing.Size(75, 29);
             this.btn_update.TabIndex = 28;
             this.btn_update.Text = "修改";
             this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
             // btn_find
             // 
-            this.btn_find.Location = new System.Drawing.Point(154, 348);
-            this.btn_find.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_find.Location = new System.Drawing.Point(206, 464);
             this.btn_find.Name = "btn_find";
-            this.btn_find.Size = new System.Drawing.Size(58, 22);
+            this.btn_find.Size = new System.Drawing.Size(149, 29);
             this.btn_find.TabIndex = 29;
-            this.btn_find.Text = "查询";
+            this.btn_find.Text = "查询所有模特";
             this.btn_find.UseVisualStyleBackColor = true;
+            this.btn_find.Click += new System.EventHandler(this.btn_find_Click);
             // 
             // panel_info
             // 
@@ -429,10 +406,9 @@ namespace ModelManager
             this.panel_info.Controls.Add(this.label3);
             this.panel_info.Controls.Add(this.label5);
             this.panel_info.Controls.Add(this.label4);
-            this.panel_info.Location = new System.Drawing.Point(11, 9);
-            this.panel_info.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_info.Location = new System.Drawing.Point(15, 12);
             this.panel_info.Name = "panel_info";
-            this.panel_info.Size = new System.Drawing.Size(297, 394);
+            this.panel_info.Size = new System.Drawing.Size(395, 525);
             this.panel_info.TabIndex = 30;
             // 
             // panel_collection
@@ -453,18 +429,16 @@ namespace ModelManager
             this.panel_collection.Controls.Add(this.group_race);
             this.panel_collection.Controls.Add(this.group_skin);
             this.panel_collection.Controls.Add(this.label6);
-            this.panel_collection.Location = new System.Drawing.Point(312, 9);
-            this.panel_collection.Margin = new System.Windows.Forms.Padding(2);
+            this.panel_collection.Location = new System.Drawing.Point(416, 12);
             this.panel_collection.Name = "panel_collection";
-            this.panel_collection.Size = new System.Drawing.Size(474, 515);
+            this.panel_collection.Size = new System.Drawing.Size(631, 686);
             this.panel_collection.TabIndex = 31;
             // 
             // btn_save_json
             // 
-            this.btn_save_json.Location = new System.Drawing.Point(5, 433);
-            this.btn_save_json.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_save_json.Location = new System.Drawing.Point(7, 577);
             this.btn_save_json.Name = "btn_save_json";
-            this.btn_save_json.Size = new System.Drawing.Size(114, 46);
+            this.btn_save_json.Size = new System.Drawing.Size(152, 61);
             this.btn_save_json.TabIndex = 23;
             this.btn_save_json.Text = "保存json数据";
             this.btn_save_json.UseVisualStyleBackColor = true;
@@ -475,31 +449,27 @@ namespace ModelManager
             this.group_wen.Controls.Add(this.lbl_flw);
             this.group_wen.Controls.Add(this.radioButton45);
             this.group_wen.Controls.Add(this.radioButton46);
-            this.group_wen.Location = new System.Drawing.Point(8, 393);
-            this.group_wen.Margin = new System.Windows.Forms.Padding(2);
+            this.group_wen.Location = new System.Drawing.Point(11, 524);
             this.group_wen.Name = "group_wen";
-            this.group_wen.Padding = new System.Windows.Forms.Padding(2);
-            this.group_wen.Size = new System.Drawing.Size(298, 35);
+            this.group_wen.Size = new System.Drawing.Size(397, 47);
             this.group_wen.TabIndex = 22;
             this.group_wen.TabStop = false;
             // 
             // lbl_flw
             // 
             this.lbl_flw.AutoSize = true;
-            this.lbl_flw.Location = new System.Drawing.Point(4, 13);
-            this.lbl_flw.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_flw.Location = new System.Drawing.Point(5, 17);
             this.lbl_flw.Name = "lbl_flw";
-            this.lbl_flw.Size = new System.Drawing.Size(41, 12);
+            this.lbl_flw.Size = new System.Drawing.Size(50, 17);
             this.lbl_flw.TabIndex = 6;
             this.lbl_flw.Text = "法令纹";
             // 
             // radioButton45
             // 
             this.radioButton45.AutoSize = true;
-            this.radioButton45.Location = new System.Drawing.Point(44, 11);
-            this.radioButton45.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton45.Location = new System.Drawing.Point(59, 15);
             this.radioButton45.Name = "radioButton45";
-            this.radioButton45.Size = new System.Drawing.Size(71, 16);
+            this.radioButton45.Size = new System.Drawing.Size(85, 21);
             this.radioButton45.TabIndex = 7;
             this.radioButton45.TabStop = true;
             this.radioButton45.Text = "有法令纹";
@@ -508,10 +478,9 @@ namespace ModelManager
             // radioButton46
             // 
             this.radioButton46.AutoSize = true;
-            this.radioButton46.Location = new System.Drawing.Point(122, 11);
-            this.radioButton46.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton46.Location = new System.Drawing.Point(163, 15);
             this.radioButton46.Name = "radioButton46";
-            this.radioButton46.Size = new System.Drawing.Size(71, 16);
+            this.radioButton46.Size = new System.Drawing.Size(85, 21);
             this.radioButton46.TabIndex = 8;
             this.radioButton46.TabStop = true;
             this.radioButton46.Text = "无法令纹";
@@ -522,31 +491,27 @@ namespace ModelManager
             this.group_hat.Controls.Add(this.lbl_hat);
             this.group_hat.Controls.Add(this.radioButton43);
             this.group_hat.Controls.Add(this.radioButton44);
-            this.group_hat.Location = new System.Drawing.Point(5, 358);
-            this.group_hat.Margin = new System.Windows.Forms.Padding(2);
+            this.group_hat.Location = new System.Drawing.Point(7, 477);
             this.group_hat.Name = "group_hat";
-            this.group_hat.Padding = new System.Windows.Forms.Padding(2);
-            this.group_hat.Size = new System.Drawing.Size(298, 35);
+            this.group_hat.Size = new System.Drawing.Size(397, 47);
             this.group_hat.TabIndex = 21;
             this.group_hat.TabStop = false;
             // 
             // lbl_hat
             // 
             this.lbl_hat.AutoSize = true;
-            this.lbl_hat.Location = new System.Drawing.Point(4, 13);
-            this.lbl_hat.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_hat.Location = new System.Drawing.Point(5, 17);
             this.lbl_hat.Name = "lbl_hat";
-            this.lbl_hat.Size = new System.Drawing.Size(29, 12);
+            this.lbl_hat.Size = new System.Drawing.Size(36, 17);
             this.lbl_hat.TabIndex = 6;
             this.lbl_hat.Text = "帽子";
             // 
             // radioButton43
             // 
             this.radioButton43.AutoSize = true;
-            this.radioButton43.Location = new System.Drawing.Point(44, 11);
-            this.radioButton43.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton43.Location = new System.Drawing.Point(59, 15);
             this.radioButton43.Name = "radioButton43";
-            this.radioButton43.Size = new System.Drawing.Size(59, 16);
+            this.radioButton43.Size = new System.Drawing.Size(71, 21);
             this.radioButton43.TabIndex = 7;
             this.radioButton43.TabStop = true;
             this.radioButton43.Text = "带帽子";
@@ -555,10 +520,9 @@ namespace ModelManager
             // radioButton44
             // 
             this.radioButton44.AutoSize = true;
-            this.radioButton44.Location = new System.Drawing.Point(112, 11);
-            this.radioButton44.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton44.Location = new System.Drawing.Point(149, 15);
             this.radioButton44.Name = "radioButton44";
-            this.radioButton44.Size = new System.Drawing.Size(59, 16);
+            this.radioButton44.Size = new System.Drawing.Size(71, 21);
             this.radioButton44.TabIndex = 8;
             this.radioButton44.TabStop = true;
             this.radioButton44.Text = "无帽子";
@@ -572,31 +536,27 @@ namespace ModelManager
             this.group_hair.Controls.Add(this.radioButton40);
             this.group_hair.Controls.Add(this.radioButton41);
             this.group_hair.Controls.Add(this.radioButton42);
-            this.group_hair.Location = new System.Drawing.Point(2, 326);
-            this.group_hair.Margin = new System.Windows.Forms.Padding(2);
+            this.group_hair.Location = new System.Drawing.Point(3, 435);
             this.group_hair.Name = "group_hair";
-            this.group_hair.Padding = new System.Windows.Forms.Padding(2);
-            this.group_hair.Size = new System.Drawing.Size(298, 28);
+            this.group_hair.Size = new System.Drawing.Size(397, 37);
             this.group_hair.TabIndex = 20;
             this.group_hair.TabStop = false;
             // 
             // lbl_hair
             // 
             this.lbl_hair.AutoSize = true;
-            this.lbl_hair.Location = new System.Drawing.Point(10, 12);
-            this.lbl_hair.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_hair.Location = new System.Drawing.Point(13, 16);
             this.lbl_hair.Name = "lbl_hair";
-            this.lbl_hair.Size = new System.Drawing.Size(29, 12);
+            this.lbl_hair.Size = new System.Drawing.Size(36, 17);
             this.lbl_hair.TabIndex = 16;
             this.lbl_hair.Text = "发型";
             // 
             // radioButton38
             // 
             this.radioButton38.AutoSize = true;
-            this.radioButton38.Location = new System.Drawing.Point(242, 10);
-            this.radioButton38.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton38.Location = new System.Drawing.Point(323, 13);
             this.radioButton38.Name = "radioButton38";
-            this.radioButton38.Size = new System.Drawing.Size(59, 16);
+            this.radioButton38.Size = new System.Drawing.Size(71, 21);
             this.radioButton38.TabIndex = 11;
             this.radioButton38.TabStop = true;
             this.radioButton38.Text = "不确定";
@@ -605,10 +565,9 @@ namespace ModelManager
             // radioButton39
             // 
             this.radioButton39.AutoSize = true;
-            this.radioButton39.Location = new System.Drawing.Point(201, 10);
-            this.radioButton39.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton39.Location = new System.Drawing.Point(268, 13);
             this.radioButton39.Name = "radioButton39";
-            this.radioButton39.Size = new System.Drawing.Size(47, 16);
+            this.radioButton39.Size = new System.Drawing.Size(57, 21);
             this.radioButton39.TabIndex = 10;
             this.radioButton39.TabStop = true;
             this.radioButton39.Text = "光头";
@@ -617,10 +576,9 @@ namespace ModelManager
             // radioButton40
             // 
             this.radioButton40.AutoSize = true;
-            this.radioButton40.Location = new System.Drawing.Point(150, 10);
-            this.radioButton40.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton40.Location = new System.Drawing.Point(200, 13);
             this.radioButton40.Name = "radioButton40";
-            this.radioButton40.Size = new System.Drawing.Size(47, 16);
+            this.radioButton40.Size = new System.Drawing.Size(57, 21);
             this.radioButton40.TabIndex = 9;
             this.radioButton40.TabStop = true;
             this.radioButton40.Text = "秃顶";
@@ -629,10 +587,9 @@ namespace ModelManager
             // radioButton41
             // 
             this.radioButton41.AutoSize = true;
-            this.radioButton41.Location = new System.Drawing.Point(99, 10);
-            this.radioButton41.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton41.Location = new System.Drawing.Point(132, 13);
             this.radioButton41.Name = "radioButton41";
-            this.radioButton41.Size = new System.Drawing.Size(47, 16);
+            this.radioButton41.Size = new System.Drawing.Size(57, 21);
             this.radioButton41.TabIndex = 8;
             this.radioButton41.TabStop = true;
             this.radioButton41.Text = "长发";
@@ -641,10 +598,9 @@ namespace ModelManager
             // radioButton42
             // 
             this.radioButton42.AutoSize = true;
-            this.radioButton42.Location = new System.Drawing.Point(46, 10);
-            this.radioButton42.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton42.Location = new System.Drawing.Point(61, 13);
             this.radioButton42.Name = "radioButton42";
-            this.radioButton42.Size = new System.Drawing.Size(47, 16);
+            this.radioButton42.Size = new System.Drawing.Size(57, 21);
             this.radioButton42.TabIndex = 7;
             this.radioButton42.TabStop = true;
             this.radioButton42.Text = "短发";
@@ -655,31 +611,27 @@ namespace ModelManager
             this.group_baheng.Controls.Add(this.lbl_bh);
             this.group_baheng.Controls.Add(this.radioButton35);
             this.group_baheng.Controls.Add(this.radioButton37);
-            this.group_baheng.Location = new System.Drawing.Point(2, 294);
-            this.group_baheng.Margin = new System.Windows.Forms.Padding(2);
+            this.group_baheng.Location = new System.Drawing.Point(3, 392);
             this.group_baheng.Name = "group_baheng";
-            this.group_baheng.Padding = new System.Windows.Forms.Padding(2);
-            this.group_baheng.Size = new System.Drawing.Size(298, 35);
+            this.group_baheng.Size = new System.Drawing.Size(397, 47);
             this.group_baheng.TabIndex = 19;
             this.group_baheng.TabStop = false;
             // 
             // lbl_bh
             // 
             this.lbl_bh.AutoSize = true;
-            this.lbl_bh.Location = new System.Drawing.Point(10, 13);
-            this.lbl_bh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_bh.Location = new System.Drawing.Point(13, 17);
             this.lbl_bh.Name = "lbl_bh";
-            this.lbl_bh.Size = new System.Drawing.Size(29, 12);
+            this.lbl_bh.Size = new System.Drawing.Size(36, 17);
             this.lbl_bh.TabIndex = 6;
             this.lbl_bh.Text = "疤痕";
             // 
             // radioButton35
             // 
             this.radioButton35.AutoSize = true;
-            this.radioButton35.Location = new System.Drawing.Point(46, 11);
-            this.radioButton35.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton35.Location = new System.Drawing.Point(61, 15);
             this.radioButton35.Name = "radioButton35";
-            this.radioButton35.Size = new System.Drawing.Size(59, 16);
+            this.radioButton35.Size = new System.Drawing.Size(71, 21);
             this.radioButton35.TabIndex = 7;
             this.radioButton35.TabStop = true;
             this.radioButton35.Text = "有疤痕";
@@ -688,10 +640,9 @@ namespace ModelManager
             // radioButton37
             // 
             this.radioButton37.AutoSize = true;
-            this.radioButton37.Location = new System.Drawing.Point(115, 15);
-            this.radioButton37.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton37.Location = new System.Drawing.Point(153, 20);
             this.radioButton37.Name = "radioButton37";
-            this.radioButton37.Size = new System.Drawing.Size(59, 16);
+            this.radioButton37.Size = new System.Drawing.Size(71, 21);
             this.radioButton37.TabIndex = 8;
             this.radioButton37.TabStop = true;
             this.radioButton37.Text = "无疤痕";
@@ -702,31 +653,27 @@ namespace ModelManager
             this.group_mask.Controls.Add(this.lbl_mask);
             this.group_mask.Controls.Add(this.radioButton34);
             this.group_mask.Controls.Add(this.radioButton36);
-            this.group_mask.Location = new System.Drawing.Point(5, 262);
-            this.group_mask.Margin = new System.Windows.Forms.Padding(2);
+            this.group_mask.Location = new System.Drawing.Point(7, 349);
             this.group_mask.Name = "group_mask";
-            this.group_mask.Padding = new System.Windows.Forms.Padding(2);
-            this.group_mask.Size = new System.Drawing.Size(298, 35);
+            this.group_mask.Size = new System.Drawing.Size(397, 47);
             this.group_mask.TabIndex = 18;
             this.group_mask.TabStop = false;
             // 
             // lbl_mask
             // 
             this.lbl_mask.AutoSize = true;
-            this.lbl_mask.Location = new System.Drawing.Point(4, 13);
-            this.lbl_mask.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_mask.Location = new System.Drawing.Point(5, 17);
             this.lbl_mask.Name = "lbl_mask";
-            this.lbl_mask.Size = new System.Drawing.Size(29, 12);
+            this.lbl_mask.Size = new System.Drawing.Size(36, 17);
             this.lbl_mask.TabIndex = 6;
             this.lbl_mask.Text = "口罩";
             // 
             // radioButton34
             // 
             this.radioButton34.AutoSize = true;
-            this.radioButton34.Location = new System.Drawing.Point(44, 11);
-            this.radioButton34.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton34.Location = new System.Drawing.Point(59, 15);
             this.radioButton34.Name = "radioButton34";
-            this.radioButton34.Size = new System.Drawing.Size(59, 16);
+            this.radioButton34.Size = new System.Drawing.Size(71, 21);
             this.radioButton34.TabIndex = 7;
             this.radioButton34.TabStop = true;
             this.radioButton34.Text = "带口罩";
@@ -735,10 +682,9 @@ namespace ModelManager
             // radioButton36
             // 
             this.radioButton36.AutoSize = true;
-            this.radioButton36.Location = new System.Drawing.Point(112, 11);
-            this.radioButton36.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton36.Location = new System.Drawing.Point(149, 15);
             this.radioButton36.Name = "radioButton36";
-            this.radioButton36.Size = new System.Drawing.Size(59, 16);
+            this.radioButton36.Size = new System.Drawing.Size(71, 21);
             this.radioButton36.TabIndex = 8;
             this.radioButton36.TabStop = true;
             this.radioButton36.Text = "无口罩";
@@ -751,31 +697,27 @@ namespace ModelManager
             this.group_laugh.Controls.Add(this.radioButton31);
             this.group_laugh.Controls.Add(this.radioButton32);
             this.group_laugh.Controls.Add(this.radioButton33);
-            this.group_laugh.Location = new System.Drawing.Point(8, 227);
-            this.group_laugh.Margin = new System.Windows.Forms.Padding(2);
+            this.group_laugh.Location = new System.Drawing.Point(11, 303);
             this.group_laugh.Name = "group_laugh";
-            this.group_laugh.Padding = new System.Windows.Forms.Padding(2);
-            this.group_laugh.Size = new System.Drawing.Size(298, 35);
+            this.group_laugh.Size = new System.Drawing.Size(397, 47);
             this.group_laugh.TabIndex = 17;
             this.group_laugh.TabStop = false;
             // 
             // lbl_laugh
             // 
             this.lbl_laugh.AutoSize = true;
-            this.lbl_laugh.Location = new System.Drawing.Point(4, 13);
-            this.lbl_laugh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_laugh.Location = new System.Drawing.Point(5, 17);
             this.lbl_laugh.Name = "lbl_laugh";
-            this.lbl_laugh.Size = new System.Drawing.Size(17, 12);
+            this.lbl_laugh.Size = new System.Drawing.Size(22, 17);
             this.lbl_laugh.TabIndex = 6;
             this.lbl_laugh.Text = "笑";
             // 
             // radioButton30
             // 
             this.radioButton30.AutoSize = true;
-            this.radioButton30.Location = new System.Drawing.Point(41, 11);
-            this.radioButton30.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton30.Location = new System.Drawing.Point(55, 15);
             this.radioButton30.Name = "radioButton30";
-            this.radioButton30.Size = new System.Drawing.Size(47, 16);
+            this.radioButton30.Size = new System.Drawing.Size(57, 21);
             this.radioButton30.TabIndex = 7;
             this.radioButton30.TabStop = true;
             this.radioButton30.Text = "微笑";
@@ -784,10 +726,9 @@ namespace ModelManager
             // radioButton31
             // 
             this.radioButton31.AutoSize = true;
-            this.radioButton31.Location = new System.Drawing.Point(178, 11);
-            this.radioButton31.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton31.Location = new System.Drawing.Point(237, 15);
             this.radioButton31.Name = "radioButton31";
-            this.radioButton31.Size = new System.Drawing.Size(35, 16);
+            this.radioButton31.Size = new System.Drawing.Size(43, 21);
             this.radioButton31.TabIndex = 10;
             this.radioButton31.TabStop = true;
             this.radioButton31.Text = "无";
@@ -796,10 +737,9 @@ namespace ModelManager
             // radioButton32
             // 
             this.radioButton32.AutoSize = true;
-            this.radioButton32.Location = new System.Drawing.Point(83, 11);
-            this.radioButton32.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton32.Location = new System.Drawing.Point(111, 15);
             this.radioButton32.Name = "radioButton32";
-            this.radioButton32.Size = new System.Drawing.Size(47, 16);
+            this.radioButton32.Size = new System.Drawing.Size(57, 21);
             this.radioButton32.TabIndex = 8;
             this.radioButton32.TabStop = true;
             this.radioButton32.Text = "大笑";
@@ -808,10 +748,9 @@ namespace ModelManager
             // radioButton33
             // 
             this.radioButton33.AutoSize = true;
-            this.radioButton33.Location = new System.Drawing.Point(130, 11);
-            this.radioButton33.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton33.Location = new System.Drawing.Point(173, 15);
             this.radioButton33.Name = "radioButton33";
-            this.radioButton33.Size = new System.Drawing.Size(47, 16);
+            this.radioButton33.Size = new System.Drawing.Size(57, 21);
             this.radioButton33.TabIndex = 9;
             this.radioButton33.TabStop = true;
             this.radioButton33.Text = "狂笑";
@@ -828,31 +767,27 @@ namespace ModelManager
             this.group_emo.Controls.Add(this.radioButton24);
             this.group_emo.Controls.Add(this.radioButton25);
             this.group_emo.Controls.Add(this.radioButton26);
-            this.group_emo.Location = new System.Drawing.Point(8, 194);
-            this.group_emo.Margin = new System.Windows.Forms.Padding(2);
+            this.group_emo.Location = new System.Drawing.Point(11, 259);
             this.group_emo.Name = "group_emo";
-            this.group_emo.Padding = new System.Windows.Forms.Padding(2);
-            this.group_emo.Size = new System.Drawing.Size(398, 28);
+            this.group_emo.Size = new System.Drawing.Size(531, 37);
             this.group_emo.TabIndex = 16;
             this.group_emo.TabStop = false;
             // 
             // lbl_emo
             // 
             this.lbl_emo.AutoSize = true;
-            this.lbl_emo.Location = new System.Drawing.Point(4, 14);
-            this.lbl_emo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_emo.Location = new System.Drawing.Point(5, 19);
             this.lbl_emo.Name = "lbl_emo";
-            this.lbl_emo.Size = new System.Drawing.Size(29, 12);
+            this.lbl_emo.Size = new System.Drawing.Size(36, 17);
             this.lbl_emo.TabIndex = 15;
             this.lbl_emo.Text = "表情";
             // 
             // radioButton29
             // 
             this.radioButton29.AutoSize = true;
-            this.radioButton29.Location = new System.Drawing.Point(355, 10);
-            this.radioButton29.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton29.Location = new System.Drawing.Point(473, 13);
             this.radioButton29.Name = "radioButton29";
-            this.radioButton29.Size = new System.Drawing.Size(35, 16);
+            this.radioButton29.Size = new System.Drawing.Size(43, 21);
             this.radioButton29.TabIndex = 14;
             this.radioButton29.TabStop = true;
             this.radioButton29.Text = "无";
@@ -861,10 +796,9 @@ namespace ModelManager
             // radioButton28
             // 
             this.radioButton28.AutoSize = true;
-            this.radioButton28.Location = new System.Drawing.Point(313, 10);
-            this.radioButton28.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton28.Location = new System.Drawing.Point(417, 13);
             this.radioButton28.Name = "radioButton28";
-            this.radioButton28.Size = new System.Drawing.Size(47, 16);
+            this.radioButton28.Size = new System.Drawing.Size(57, 21);
             this.radioButton28.TabIndex = 13;
             this.radioButton28.TabStop = true;
             this.radioButton28.Text = "蔑视";
@@ -873,10 +807,9 @@ namespace ModelManager
             // radioButton27
             // 
             this.radioButton27.AutoSize = true;
-            this.radioButton27.Location = new System.Drawing.Point(266, 10);
-            this.radioButton27.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton27.Location = new System.Drawing.Point(355, 13);
             this.radioButton27.Name = "radioButton27";
-            this.radioButton27.Size = new System.Drawing.Size(47, 16);
+            this.radioButton27.Size = new System.Drawing.Size(57, 21);
             this.radioButton27.TabIndex = 12;
             this.radioButton27.TabStop = true;
             this.radioButton27.Text = "惊讶";
@@ -885,10 +818,9 @@ namespace ModelManager
             // radioButton20
             // 
             this.radioButton20.AutoSize = true;
-            this.radioButton20.Location = new System.Drawing.Point(218, 10);
-            this.radioButton20.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton20.Location = new System.Drawing.Point(291, 13);
             this.radioButton20.Name = "radioButton20";
-            this.radioButton20.Size = new System.Drawing.Size(47, 16);
+            this.radioButton20.Size = new System.Drawing.Size(57, 21);
             this.radioButton20.TabIndex = 11;
             this.radioButton20.TabStop = true;
             this.radioButton20.Text = "伤心";
@@ -897,10 +829,9 @@ namespace ModelManager
             // radioButton23
             // 
             this.radioButton23.AutoSize = true;
-            this.radioButton23.Location = new System.Drawing.Point(178, 10);
-            this.radioButton23.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton23.Location = new System.Drawing.Point(237, 13);
             this.radioButton23.Name = "radioButton23";
-            this.radioButton23.Size = new System.Drawing.Size(47, 16);
+            this.radioButton23.Size = new System.Drawing.Size(57, 21);
             this.radioButton23.TabIndex = 10;
             this.radioButton23.TabStop = true;
             this.radioButton23.Text = "高兴";
@@ -909,10 +840,9 @@ namespace ModelManager
             // radioButton24
             // 
             this.radioButton24.AutoSize = true;
-            this.radioButton24.Location = new System.Drawing.Point(130, 10);
-            this.radioButton24.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton24.Location = new System.Drawing.Point(173, 13);
             this.radioButton24.Name = "radioButton24";
-            this.radioButton24.Size = new System.Drawing.Size(47, 16);
+            this.radioButton24.Size = new System.Drawing.Size(57, 21);
             this.radioButton24.TabIndex = 9;
             this.radioButton24.TabStop = true;
             this.radioButton24.Text = "恐惧";
@@ -921,10 +851,9 @@ namespace ModelManager
             // radioButton25
             // 
             this.radioButton25.AutoSize = true;
-            this.radioButton25.Location = new System.Drawing.Point(83, 10);
-            this.radioButton25.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton25.Location = new System.Drawing.Point(111, 13);
             this.radioButton25.Name = "radioButton25";
-            this.radioButton25.Size = new System.Drawing.Size(47, 16);
+            this.radioButton25.Size = new System.Drawing.Size(57, 21);
             this.radioButton25.TabIndex = 8;
             this.radioButton25.TabStop = true;
             this.radioButton25.Text = "厌恶";
@@ -933,10 +862,9 @@ namespace ModelManager
             // radioButton26
             // 
             this.radioButton26.AutoSize = true;
-            this.radioButton26.Location = new System.Drawing.Point(41, 10);
-            this.radioButton26.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton26.Location = new System.Drawing.Point(55, 13);
             this.radioButton26.Name = "radioButton26";
-            this.radioButton26.Size = new System.Drawing.Size(47, 16);
+            this.radioButton26.Size = new System.Drawing.Size(57, 21);
             this.radioButton26.TabIndex = 7;
             this.radioButton26.TabStop = true;
             this.radioButton26.Text = "愤怒";
@@ -948,31 +876,27 @@ namespace ModelManager
             this.group_glass.Controls.Add(this.radioButton19);
             this.group_glass.Controls.Add(this.radioButton21);
             this.group_glass.Controls.Add(this.radioButton22);
-            this.group_glass.Location = new System.Drawing.Point(8, 156);
-            this.group_glass.Margin = new System.Windows.Forms.Padding(2);
+            this.group_glass.Location = new System.Drawing.Point(11, 208);
             this.group_glass.Name = "group_glass";
-            this.group_glass.Padding = new System.Windows.Forms.Padding(2);
-            this.group_glass.Size = new System.Drawing.Size(298, 35);
+            this.group_glass.Size = new System.Drawing.Size(397, 47);
             this.group_glass.TabIndex = 15;
             this.group_glass.TabStop = false;
             // 
             // lbl_glass
             // 
             this.lbl_glass.AutoSize = true;
-            this.lbl_glass.Location = new System.Drawing.Point(4, 13);
-            this.lbl_glass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_glass.Location = new System.Drawing.Point(5, 17);
             this.lbl_glass.Name = "lbl_glass";
-            this.lbl_glass.Size = new System.Drawing.Size(29, 12);
+            this.lbl_glass.Size = new System.Drawing.Size(36, 17);
             this.lbl_glass.TabIndex = 6;
             this.lbl_glass.Text = "眼镜";
             // 
             // radioButton19
             // 
             this.radioButton19.AutoSize = true;
-            this.radioButton19.Location = new System.Drawing.Point(41, 11);
-            this.radioButton19.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton19.Location = new System.Drawing.Point(55, 15);
             this.radioButton19.Name = "radioButton19";
-            this.radioButton19.Size = new System.Drawing.Size(59, 16);
+            this.radioButton19.Size = new System.Drawing.Size(71, 21);
             this.radioButton19.TabIndex = 7;
             this.radioButton19.TabStop = true;
             this.radioButton19.Text = "无眼镜";
@@ -981,10 +905,9 @@ namespace ModelManager
             // radioButton21
             // 
             this.radioButton21.AutoSize = true;
-            this.radioButton21.Location = new System.Drawing.Point(110, 11);
-            this.radioButton21.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton21.Location = new System.Drawing.Point(147, 15);
             this.radioButton21.Name = "radioButton21";
-            this.radioButton21.Size = new System.Drawing.Size(71, 16);
+            this.radioButton21.Size = new System.Drawing.Size(85, 21);
             this.radioButton21.TabIndex = 8;
             this.radioButton21.TabStop = true;
             this.radioButton21.Text = "普通眼镜";
@@ -993,10 +916,9 @@ namespace ModelManager
             // radioButton22
             // 
             this.radioButton22.AutoSize = true;
-            this.radioButton22.Location = new System.Drawing.Point(178, 11);
-            this.radioButton22.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton22.Location = new System.Drawing.Point(237, 15);
             this.radioButton22.Name = "radioButton22";
-            this.radioButton22.Size = new System.Drawing.Size(47, 16);
+            this.radioButton22.Size = new System.Drawing.Size(57, 21);
             this.radioButton22.TabIndex = 9;
             this.radioButton22.TabStop = true;
             this.radioButton22.Text = "墨镜";
@@ -1010,31 +932,27 @@ namespace ModelManager
             this.group_face.Controls.Add(this.radioButton16);
             this.group_face.Controls.Add(this.radioButton17);
             this.group_face.Controls.Add(this.radioButton18);
-            this.group_face.Location = new System.Drawing.Point(8, 125);
-            this.group_face.Margin = new System.Windows.Forms.Padding(2);
+            this.group_face.Location = new System.Drawing.Point(11, 167);
             this.group_face.Name = "group_face";
-            this.group_face.Padding = new System.Windows.Forms.Padding(2);
-            this.group_face.Size = new System.Drawing.Size(298, 28);
+            this.group_face.Size = new System.Drawing.Size(397, 37);
             this.group_face.TabIndex = 14;
             this.group_face.TabStop = false;
             // 
             // lbl_face
             // 
             this.lbl_face.AutoSize = true;
-            this.lbl_face.Location = new System.Drawing.Point(4, 14);
-            this.lbl_face.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_face.Location = new System.Drawing.Point(5, 19);
             this.lbl_face.Name = "lbl_face";
-            this.lbl_face.Size = new System.Drawing.Size(29, 12);
+            this.lbl_face.Size = new System.Drawing.Size(36, 17);
             this.lbl_face.TabIndex = 12;
             this.lbl_face.Text = "脸型";
             // 
             // radioButton14
             // 
             this.radioButton14.AutoSize = true;
-            this.radioButton14.Location = new System.Drawing.Point(248, 10);
-            this.radioButton14.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton14.Location = new System.Drawing.Point(331, 13);
             this.radioButton14.Name = "radioButton14";
-            this.radioButton14.Size = new System.Drawing.Size(47, 16);
+            this.radioButton14.Size = new System.Drawing.Size(57, 21);
             this.radioButton14.TabIndex = 11;
             this.radioButton14.TabStop = true;
             this.radioButton14.Text = "圆形";
@@ -1043,10 +961,9 @@ namespace ModelManager
             // radioButton15
             // 
             this.radioButton15.AutoSize = true;
-            this.radioButton15.Location = new System.Drawing.Point(201, 10);
-            this.radioButton15.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton15.Location = new System.Drawing.Point(268, 13);
             this.radioButton15.Name = "radioButton15";
-            this.radioButton15.Size = new System.Drawing.Size(47, 16);
+            this.radioButton15.Size = new System.Drawing.Size(57, 21);
             this.radioButton15.TabIndex = 10;
             this.radioButton15.TabStop = true;
             this.radioButton15.Text = "心形";
@@ -1055,10 +972,9 @@ namespace ModelManager
             // radioButton16
             // 
             this.radioButton16.AutoSize = true;
-            this.radioButton16.Location = new System.Drawing.Point(154, 10);
-            this.radioButton16.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton16.Location = new System.Drawing.Point(205, 13);
             this.radioButton16.Name = "radioButton16";
-            this.radioButton16.Size = new System.Drawing.Size(47, 16);
+            this.radioButton16.Size = new System.Drawing.Size(57, 21);
             this.radioButton16.TabIndex = 9;
             this.radioButton16.TabStop = true;
             this.radioButton16.Text = "椭圆";
@@ -1067,10 +983,9 @@ namespace ModelManager
             // radioButton17
             // 
             this.radioButton17.AutoSize = true;
-            this.radioButton17.Location = new System.Drawing.Point(99, 10);
-            this.radioButton17.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton17.Location = new System.Drawing.Point(132, 13);
             this.radioButton17.Name = "radioButton17";
-            this.radioButton17.Size = new System.Drawing.Size(59, 16);
+            this.radioButton17.Size = new System.Drawing.Size(71, 21);
             this.radioButton17.TabIndex = 8;
             this.radioButton17.TabStop = true;
             this.radioButton17.Text = "三角形";
@@ -1079,10 +994,9 @@ namespace ModelManager
             // radioButton18
             // 
             this.radioButton18.AutoSize = true;
-            this.radioButton18.Location = new System.Drawing.Point(41, 10);
-            this.radioButton18.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton18.Location = new System.Drawing.Point(55, 13);
             this.radioButton18.Name = "radioButton18";
-            this.radioButton18.Size = new System.Drawing.Size(59, 16);
+            this.radioButton18.Size = new System.Drawing.Size(71, 21);
             this.radioButton18.TabIndex = 7;
             this.radioButton18.TabStop = true;
             this.radioButton18.Text = "正方形";
@@ -1096,31 +1010,27 @@ namespace ModelManager
             this.group_age.Controls.Add(this.radioButton10);
             this.group_age.Controls.Add(this.radioButton11);
             this.group_age.Controls.Add(this.radioButton12);
-            this.group_age.Location = new System.Drawing.Point(8, 98);
-            this.group_age.Margin = new System.Windows.Forms.Padding(2);
+            this.group_age.Location = new System.Drawing.Point(11, 131);
             this.group_age.Name = "group_age";
-            this.group_age.Padding = new System.Windows.Forms.Padding(2);
-            this.group_age.Size = new System.Drawing.Size(298, 28);
+            this.group_age.Size = new System.Drawing.Size(397, 37);
             this.group_age.TabIndex = 13;
             this.group_age.TabStop = false;
             // 
             // lbl_age
             // 
             this.lbl_age.AutoSize = true;
-            this.lbl_age.Location = new System.Drawing.Point(4, 14);
-            this.lbl_age.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_age.Location = new System.Drawing.Point(5, 19);
             this.lbl_age.Name = "lbl_age";
-            this.lbl_age.Size = new System.Drawing.Size(29, 12);
+            this.lbl_age.Size = new System.Drawing.Size(36, 17);
             this.lbl_age.TabIndex = 12;
             this.lbl_age.Text = "年龄";
             // 
             // radioButton13
             // 
             this.radioButton13.AutoSize = true;
-            this.radioButton13.Location = new System.Drawing.Point(248, 10);
-            this.radioButton13.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton13.Location = new System.Drawing.Point(331, 13);
             this.radioButton13.Name = "radioButton13";
-            this.radioButton13.Size = new System.Drawing.Size(47, 16);
+            this.radioButton13.Size = new System.Drawing.Size(57, 21);
             this.radioButton13.TabIndex = 11;
             this.radioButton13.TabStop = true;
             this.radioButton13.Text = "老年";
@@ -1129,10 +1039,9 @@ namespace ModelManager
             // radioButton9
             // 
             this.radioButton9.AutoSize = true;
-            this.radioButton9.Location = new System.Drawing.Point(201, 10);
-            this.radioButton9.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton9.Location = new System.Drawing.Point(268, 13);
             this.radioButton9.Name = "radioButton9";
-            this.radioButton9.Size = new System.Drawing.Size(47, 16);
+            this.radioButton9.Size = new System.Drawing.Size(57, 21);
             this.radioButton9.TabIndex = 10;
             this.radioButton9.TabStop = true;
             this.radioButton9.Text = "中年";
@@ -1141,10 +1050,9 @@ namespace ModelManager
             // radioButton10
             // 
             this.radioButton10.AutoSize = true;
-            this.radioButton10.Location = new System.Drawing.Point(146, 10);
-            this.radioButton10.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton10.Location = new System.Drawing.Point(195, 13);
             this.radioButton10.Name = "radioButton10";
-            this.radioButton10.Size = new System.Drawing.Size(47, 16);
+            this.radioButton10.Size = new System.Drawing.Size(57, 21);
             this.radioButton10.TabIndex = 9;
             this.radioButton10.TabStop = true;
             this.radioButton10.Text = "青年";
@@ -1153,10 +1061,9 @@ namespace ModelManager
             // radioButton11
             // 
             this.radioButton11.AutoSize = true;
-            this.radioButton11.Location = new System.Drawing.Point(99, 10);
-            this.radioButton11.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton11.Location = new System.Drawing.Point(132, 13);
             this.radioButton11.Name = "radioButton11";
-            this.radioButton11.Size = new System.Drawing.Size(47, 16);
+            this.radioButton11.Size = new System.Drawing.Size(57, 21);
             this.radioButton11.TabIndex = 8;
             this.radioButton11.TabStop = true;
             this.radioButton11.Text = "少年";
@@ -1165,10 +1072,9 @@ namespace ModelManager
             // radioButton12
             // 
             this.radioButton12.AutoSize = true;
-            this.radioButton12.Location = new System.Drawing.Point(41, 10);
-            this.radioButton12.Margin = new System.Windows.Forms.Padding(2);
+            this.radioButton12.Location = new System.Drawing.Point(55, 13);
             this.radioButton12.Name = "radioButton12";
-            this.radioButton12.Size = new System.Drawing.Size(47, 16);
+            this.radioButton12.Size = new System.Drawing.Size(57, 21);
             this.radioButton12.TabIndex = 7;
             this.radioButton12.TabStop = true;
             this.radioButton12.Text = "儿童";
@@ -1181,31 +1087,27 @@ namespace ModelManager
             this.group_race.Controls.Add(this.rad_race_red);
             this.group_race.Controls.Add(this.rad_race_yellow);
             this.group_race.Controls.Add(this.rad_race_white);
-            this.group_race.Location = new System.Drawing.Point(8, 63);
-            this.group_race.Margin = new System.Windows.Forms.Padding(2);
+            this.group_race.Location = new System.Drawing.Point(11, 84);
             this.group_race.Name = "group_race";
-            this.group_race.Padding = new System.Windows.Forms.Padding(2);
-            this.group_race.Size = new System.Drawing.Size(298, 35);
+            this.group_race.Size = new System.Drawing.Size(397, 47);
             this.group_race.TabIndex = 12;
             this.group_race.TabStop = false;
             // 
             // lbl_race
             // 
             this.lbl_race.AutoSize = true;
-            this.lbl_race.Location = new System.Drawing.Point(4, 13);
-            this.lbl_race.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_race.Location = new System.Drawing.Point(5, 17);
             this.lbl_race.Name = "lbl_race";
-            this.lbl_race.Size = new System.Drawing.Size(29, 12);
+            this.lbl_race.Size = new System.Drawing.Size(36, 17);
             this.lbl_race.TabIndex = 6;
             this.lbl_race.Text = "种族";
             // 
             // rad_race_black
             // 
             this.rad_race_black.AutoSize = true;
-            this.rad_race_black.Location = new System.Drawing.Point(41, 11);
-            this.rad_race_black.Margin = new System.Windows.Forms.Padding(2);
+            this.rad_race_black.Location = new System.Drawing.Point(55, 15);
             this.rad_race_black.Name = "rad_race_black";
-            this.rad_race_black.Size = new System.Drawing.Size(47, 16);
+            this.rad_race_black.Size = new System.Drawing.Size(57, 21);
             this.rad_race_black.TabIndex = 7;
             this.rad_race_black.TabStop = true;
             this.rad_race_black.Text = "黑种";
@@ -1214,10 +1116,9 @@ namespace ModelManager
             // rad_race_red
             // 
             this.rad_race_red.AutoSize = true;
-            this.rad_race_red.Location = new System.Drawing.Point(178, 11);
-            this.rad_race_red.Margin = new System.Windows.Forms.Padding(2);
+            this.rad_race_red.Location = new System.Drawing.Point(237, 15);
             this.rad_race_red.Name = "rad_race_red";
-            this.rad_race_red.Size = new System.Drawing.Size(47, 16);
+            this.rad_race_red.Size = new System.Drawing.Size(57, 21);
             this.rad_race_red.TabIndex = 10;
             this.rad_race_red.TabStop = true;
             this.rad_race_red.Text = "棕种";
@@ -1226,10 +1127,9 @@ namespace ModelManager
             // rad_race_yellow
             // 
             this.rad_race_yellow.AutoSize = true;
-            this.rad_race_yellow.Location = new System.Drawing.Point(83, 11);
-            this.rad_race_yellow.Margin = new System.Windows.Forms.Padding(2);
+            this.rad_race_yellow.Location = new System.Drawing.Point(111, 15);
             this.rad_race_yellow.Name = "rad_race_yellow";
-            this.rad_race_yellow.Size = new System.Drawing.Size(47, 16);
+            this.rad_race_yellow.Size = new System.Drawing.Size(57, 21);
             this.rad_race_yellow.TabIndex = 8;
             this.rad_race_yellow.TabStop = true;
             this.rad_race_yellow.Text = "黄种";
@@ -1238,10 +1138,9 @@ namespace ModelManager
             // rad_race_white
             // 
             this.rad_race_white.AutoSize = true;
-            this.rad_race_white.Location = new System.Drawing.Point(130, 11);
-            this.rad_race_white.Margin = new System.Windows.Forms.Padding(2);
+            this.rad_race_white.Location = new System.Drawing.Point(173, 15);
             this.rad_race_white.Name = "rad_race_white";
-            this.rad_race_white.Size = new System.Drawing.Size(47, 16);
+            this.rad_race_white.Size = new System.Drawing.Size(57, 21);
             this.rad_race_white.TabIndex = 9;
             this.rad_race_white.TabStop = true;
             this.rad_race_white.Text = "白种";
@@ -1254,31 +1153,27 @@ namespace ModelManager
             this.group_skin.Controls.Add(this.rad_skin_white);
             this.group_skin.Controls.Add(this.rad_skin_yellow);
             this.group_skin.Controls.Add(this.rad_skin_black);
-            this.group_skin.Location = new System.Drawing.Point(8, 24);
-            this.group_skin.Margin = new System.Windows.Forms.Padding(2);
+            this.group_skin.Location = new System.Drawing.Point(11, 32);
             this.group_skin.Name = "group_skin";
-            this.group_skin.Padding = new System.Windows.Forms.Padding(2);
-            this.group_skin.Size = new System.Drawing.Size(298, 34);
+            this.group_skin.Size = new System.Drawing.Size(397, 45);
             this.group_skin.TabIndex = 11;
             this.group_skin.TabStop = false;
             // 
             // lbl_color
             // 
             this.lbl_color.AutoSize = true;
-            this.lbl_color.Location = new System.Drawing.Point(10, 14);
-            this.lbl_color.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lbl_color.Location = new System.Drawing.Point(13, 19);
             this.lbl_color.Name = "lbl_color";
-            this.lbl_color.Size = new System.Drawing.Size(29, 12);
+            this.lbl_color.Size = new System.Drawing.Size(36, 17);
             this.lbl_color.TabIndex = 11;
             this.lbl_color.Text = "肤色";
             // 
             // rad_skin_red
             // 
             this.rad_skin_red.AutoSize = true;
-            this.rad_skin_red.Location = new System.Drawing.Point(178, 10);
-            this.rad_skin_red.Margin = new System.Windows.Forms.Padding(2);
+            this.rad_skin_red.Location = new System.Drawing.Point(237, 13);
             this.rad_skin_red.Name = "rad_skin_red";
-            this.rad_skin_red.Size = new System.Drawing.Size(47, 16);
+            this.rad_skin_red.Size = new System.Drawing.Size(57, 21);
             this.rad_skin_red.TabIndex = 10;
             this.rad_skin_red.TabStop = true;
             this.rad_skin_red.Text = "红色";
@@ -1287,10 +1182,9 @@ namespace ModelManager
             // rad_skin_white
             // 
             this.rad_skin_white.AutoSize = true;
-            this.rad_skin_white.Location = new System.Drawing.Point(130, 10);
-            this.rad_skin_white.Margin = new System.Windows.Forms.Padding(2);
+            this.rad_skin_white.Location = new System.Drawing.Point(173, 13);
             this.rad_skin_white.Name = "rad_skin_white";
-            this.rad_skin_white.Size = new System.Drawing.Size(47, 16);
+            this.rad_skin_white.Size = new System.Drawing.Size(57, 21);
             this.rad_skin_white.TabIndex = 9;
             this.rad_skin_white.TabStop = true;
             this.rad_skin_white.Text = "白色";
@@ -1299,10 +1193,9 @@ namespace ModelManager
             // rad_skin_yellow
             // 
             this.rad_skin_yellow.AutoSize = true;
-            this.rad_skin_yellow.Location = new System.Drawing.Point(83, 10);
-            this.rad_skin_yellow.Margin = new System.Windows.Forms.Padding(2);
+            this.rad_skin_yellow.Location = new System.Drawing.Point(111, 13);
             this.rad_skin_yellow.Name = "rad_skin_yellow";
-            this.rad_skin_yellow.Size = new System.Drawing.Size(47, 16);
+            this.rad_skin_yellow.Size = new System.Drawing.Size(57, 21);
             this.rad_skin_yellow.TabIndex = 8;
             this.rad_skin_yellow.TabStop = true;
             this.rad_skin_yellow.Text = "黄色";
@@ -1311,10 +1204,9 @@ namespace ModelManager
             // rad_skin_black
             // 
             this.rad_skin_black.AutoSize = true;
-            this.rad_skin_black.Location = new System.Drawing.Point(41, 12);
-            this.rad_skin_black.Margin = new System.Windows.Forms.Padding(2);
+            this.rad_skin_black.Location = new System.Drawing.Point(55, 16);
             this.rad_skin_black.Name = "rad_skin_black";
-            this.rad_skin_black.Size = new System.Drawing.Size(47, 16);
+            this.rad_skin_black.Size = new System.Drawing.Size(57, 21);
             this.rad_skin_black.TabIndex = 7;
             this.rad_skin_black.TabStop = true;
             this.rad_skin_black.Text = "黑色";
@@ -1324,23 +1216,21 @@ namespace ModelManager
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft YaHei UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(4, 2);
-            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label6.Location = new System.Drawing.Point(5, 3);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 22);
+            this.label6.Size = new System.Drawing.Size(92, 27);
             this.label6.TabIndex = 0;
             this.label6.Text = "数据标识";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(794, 533);
+            this.ClientSize = new System.Drawing.Size(1059, 711);
             this.Controls.Add(this.panel_collection);
             this.Controls.Add(this.panel_info);
             this.Controls.Add(this.btn_getSN);
             this.Controls.Add(this.txt_getSN);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "模特管理系统";
             this.Load += new System.EventHandler(this.Form1_Load);

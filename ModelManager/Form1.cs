@@ -29,9 +29,27 @@ namespace ModelManager
         //保存模特信息
         private void btn_save_Click(object sender, EventArgs e)
         {
-            TextBoxIsNull(this.panel_info,this.pic_pic);//判断是否为空
+            bool flag=TextBoxIsNull(this.panel_info,this.pic_pic);//判断是否为空
+
+            if (flag)
+            {
+                SaveInfo(path);//保存至txt
+                SqlCtr sqlCtr = new SqlCtr();
+                sqlCtr.SqlAdd(people);//保存至mysql
+                MessageBox.Show("successful");
+            }
+            else
+            {
+                MessageBox.Show("请完善所有信息");
+            }
         }
-        private void TextBoxIsNull(Panel panel,PictureBox pictureBox)
+        /// <summary>
+        /// 判断TextBox和图片都填了
+        /// </summary>
+        /// <param name="panel"></param>
+        /// <param name="pictureBox"></param>
+        /// <returns>true为非空</returns>
+        private bool TextBoxIsNull(Panel panel,PictureBox pictureBox)
         {
             //判断所有txt都填写了
             bool flag = true;
@@ -47,16 +65,11 @@ namespace ModelManager
                     }
                 }
             }
-
-            if ((flag==false) || ((pictureBox.Image == null)))
-            {
-                MessageBox.Show("请填完所有信息后再提交");
+            if(pictureBox.Image == null) {
+                flag = false;
             }
-            else
-            {
-                SaveInfo();//保存信息到文本文件种
 
-            }
+            return flag;
         }
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -77,9 +90,10 @@ namespace ModelManager
         }
 
         /// <summary>
-        /// 保存模特信息到文本文件
+        /// 保存模特信息到指定txt文件中
         /// </summary>
-        private void SaveInfo()
+        /// <param name="path">指定txt文件</param>
+        private void SaveInfo(String path)
         {
             //封装进模特类
             people.card_id = txt_cardid.Text;
@@ -226,6 +240,28 @@ namespace ModelManager
             json +=  "}";
             return json;
 
+
+        }
+        /// <summary>
+        /// Mysql的链接
+        /// </summary>
+        private void MysqlConn(String str)
+        {
+
+        }
+
+        private void btn_find_Click(object sender, EventArgs e)
+        {
+          
+            ShowInfo f2 = new ShowInfo();//首先将另一个窗口Form2实例化
+            f2.Visible = false;//将当前窗口设置为不可视；如果不这样处理则系统报错。
+            f2.ShowDialog();//打开窗口
+
+
+        }
+
+        private void btn_update_Click(object sender, EventArgs e)
+        {
 
         }
         //创建一个lbl
