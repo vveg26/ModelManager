@@ -98,6 +98,43 @@ namespace ModelManager
             }
             return ds;
         }
+        //根据SN值来查询
+        public bool SqlFindBySN(string SN)
+        {
+            MySqlConnection conn = this.SqlConn();
+            bool flag = false;
+            try
+            {
+
+                conn.Open();//建立连接，可能出现异常,使用try catch语句
+                string SqlStr = "select id,name,card_type,card_id,gender,address,contact,race,SN from model_info where SN = '" + SN + "' ";
+                MySqlCommand cmd = new MySqlCommand(SqlStr, conn);
+                cmd.ExecuteNonQuery();//有返回结果说明存在SN
+                MySqlDataAdapter adap = new MySqlDataAdapter(cmd);//将返回的数据封装进adaper
+                DataSet ds = new DataSet();
+                adap.Fill(ds);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    flag=false;
+                }
+                else
+                {
+                    flag = true;
+                }
+
+            }
+            catch (MySqlException exe)
+            {
+                Console.WriteLine(exe.Message);//有错则报出错误
+
+            }
+            finally
+            {
+                
+                conn.Close();//关闭通道
+            }
+            return flag;
+        }
 
         //根据ID删除
         public void DelById(int id)

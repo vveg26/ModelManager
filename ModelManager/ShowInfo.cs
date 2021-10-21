@@ -104,7 +104,7 @@ namespace ModelManager
                         int id = int.Parse(txt_del.Text);
                         SqlCtr sqlDel = new SqlCtr();
                         sqlDel.DelById(id);
-                        
+                        MessageBox.Show("删除成功");
                 }
                 else
                 {

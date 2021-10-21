@@ -30,7 +30,7 @@ namespace ModelManager
         private void btn_save_Click(object sender, EventArgs e)
         {   
             //TODO 查询模特的SN码，若存在，则获取SN码，若不存在，就保存到数据库中
-
+           
 
             bool flag=TextBoxIsNull(this.panel_info,this.pic_pic);//判断是否为空
 
@@ -38,8 +38,17 @@ namespace ModelManager
             {
                 SaveInfo(path);//保存至txt
                 SqlCtr sqlCtr = new SqlCtr();
-                sqlCtr.SqlAdd(people);//保存至mysql
-                MessageBox.Show("保存成功");
+                if (sqlCtr.SqlFindBySN(people.SN))
+                {
+                    sqlCtr.SqlAdd(people);//保存至mysql
+                    MessageBox.Show("保存成功");
+                }
+                else
+                {
+                    MessageBox.Show("已存在");
+
+                }
+
             }
             else
             {
