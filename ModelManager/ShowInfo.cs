@@ -22,9 +22,11 @@ namespace ModelManager
         {   
             SqlCtr sql = new SqlCtr();
             this.dataGridView1.ReadOnly = true;
+            
             dataGridView1.AutoGenerateColumns = true;//自动生成列表
             this.dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter; //设置输入后回车完成
             this.dataGridView1.DataSource = sql.SqlFindAll().Tables[0].DefaultView;//存在图片流无法显示的问题？
+            
         }
 
         private void btn_update_Click(object sender, EventArgs e)
@@ -36,7 +38,9 @@ namespace ModelManager
         /// </summary>
         public void Lock_Data()
         {
-            this.dataGridView1.ReadOnly = !this.dataGridView1.ReadOnly;
+            
+            this.dataGridView1.ReadOnly = !this.dataGridView1.ReadOnly;//只读和修改变换
+            this.dataGridView1.Columns[0].ReadOnly = true;//设置第一列为只读
             if (this.dataGridView1.ReadOnly) 
             {
                 this.btn_update.Text = "预览模式";
@@ -80,16 +84,39 @@ namespace ModelManager
 
 
             dataGridView1.DataSource =null;
+            
             //查询信息有问题
             SqlCtr sqlfind = new SqlCtr();
             dataGridView1.AutoGenerateColumns = true;//自动生成列表
             this.dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter; //设置输入后回车完成
             this.dataGridView1.DataSource = sqlfind.SqlFindByName(txt_find.Text).Tables[0].DefaultView;//
+            this.dataGridView1.ReadOnly = !this.dataGridView1.ReadOnly;//只读和修改变换
         }
 
+        //DeleteByID
         private void btn_del_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                if (int.Parse(txt_del.Text) > 0)
+                {
+                    //删除数据
+                        int id = int.Parse(txt_del.Text);
+                        SqlCtr sqlDel = new SqlCtr();
+                        sqlDel.DelById(id);
+                        
+                }
+                else
+                {
+                    MessageBox.Show("必须是正整数");
+                }
+            }
+            catch (FormatException)
+            {
+                MessageBox.Show("必须是正整数");
+            }
+            
+            
         }
     }
 }

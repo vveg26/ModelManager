@@ -39,7 +39,7 @@ namespace ModelManager
                 SaveInfo(path);//保存至txt
                 SqlCtr sqlCtr = new SqlCtr();
                 sqlCtr.SqlAdd(people);//保存至mysql
-                MessageBox.Show("successful");
+                MessageBox.Show("保存成功");
             }
             else
             {

@@ -13,7 +13,7 @@ namespace ModelManager
     {   //连接数据库
         public MySqlConnection SqlConn()
         {
-            string connStr = @"server=localhost;port=3306;user=root;password=123qweasd; database=vs_database;";
+            string connStr = @"server=localhost;port=3306;user=root;password=root; database=vs_database;";
             MySqlConnection conn = new MySqlConnection(connStr);
             return conn;
         }
@@ -99,9 +99,28 @@ namespace ModelManager
             return ds;
         }
 
+        //根据ID删除
         public void DelById(int id)
         {
+            MySqlConnection conn = this.SqlConn();
+            try
+            {
 
+                conn.Open();//建立连接，可能出现异常,使用try catch语句
+                string SqlStr = "delete from model_info where id = "+id+" ";
+                MySqlCommand cmd = new MySqlCommand(SqlStr, conn);
+                cmd.ExecuteNonQuery();
+
+            }
+            catch (MySqlException exe)
+            {
+                Console.WriteLine(exe.Message);//有错则报出错误
+
+            }
+            finally
+            {
+                conn.Close();//关闭通道
+            }
         }
 
 
