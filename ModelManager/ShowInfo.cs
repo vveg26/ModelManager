@@ -84,7 +84,7 @@ namespace ModelManager
             SqlCtr sqlfind = new SqlCtr();
             dataGridView1.AutoGenerateColumns = true;//自动生成列表
             this.dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter; //设置输入后回车完成
-            this.dataGridView1.DataSource = sqlfind.SqlFindByName(txt_find.Text).Tables[0].DefaultView;//存在图片流无法显示的问题？
+            this.dataGridView1.DataSource = sqlfind.SqlFindByName(txt_find.Text).Tables[0].DefaultView;//
         }
 
         private void btn_del_Click(object sender, EventArgs e)

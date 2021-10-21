@@ -81,7 +81,7 @@ namespace ModelManager
             {
 
                 conn.Open();//建立连接，可能出现异常,使用try catch语句
-                string SqlStr = "select id,name,card_type,card_id,gender,address,contact,race,SN from model_info where name = "+name+" ";
+                string SqlStr = "select id,name,card_type,card_id,gender,address,contact,race,SN from model_info where name = '"+name+"' ";
                 MySqlCommand cmd = new MySqlCommand(SqlStr, conn);
                 MySqlDataAdapter adap = new MySqlDataAdapter(cmd);//将返回的数据封装进adaper              
                 adap.Fill(ds);
