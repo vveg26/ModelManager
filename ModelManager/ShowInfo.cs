@@ -39,13 +39,13 @@ namespace ModelManager
             this.dataGridView1.ReadOnly = !this.dataGridView1.ReadOnly;
             if (this.dataGridView1.ReadOnly) 
             {
-                this.btn_update.Text = "修改信息";
-                this.label1.Text = "请点击按钮，直接在列表中预览模特信息";
+                this.btn_update.Text = "预览模式";
+                this.label1.Text = "在列表中预览模特信息";
             }
             else
             {
-                this.btn_update.Text = "预览信息";
-                this.label1.Text = "请点击按钮，直接在列表中修改模特信息";
+                this.btn_update.Text = "修改模式";
+                this.label1.Text = "在列表中修改模特信息";
             }
         }
         //修改单元格就修改数据库

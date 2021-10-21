@@ -28,7 +28,10 @@ namespace ModelManager
         }
         //保存模特信息
         private void btn_save_Click(object sender, EventArgs e)
-        {
+        {   
+            //TODO 查询模特的SN码，若存在，则获取SN码，若不存在，就保存到数据库中
+
+
             bool flag=TextBoxIsNull(this.panel_info,this.pic_pic);//判断是否为空
 
             if (flag)

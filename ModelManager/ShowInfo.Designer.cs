@@ -37,6 +37,7 @@ namespace ModelManager
             this.btn_del = new System.Windows.Forms.Button();
             this.txt_find = new System.Windows.Forms.TextBox();
             this.txt_del = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,11 +53,11 @@ namespace ModelManager
             // 
             // btn_update
             // 
-            this.btn_update.Location = new System.Drawing.Point(9, 442);
+            this.btn_update.Location = new System.Drawing.Point(9, 444);
             this.btn_update.Name = "btn_update";
             this.btn_update.Size = new System.Drawing.Size(163, 54);
             this.btn_update.TabIndex = 1;
-            this.btn_update.Text = "修改信息";
+            this.btn_update.Text = "预览模式";
             this.btn_update.UseVisualStyleBackColor = true;
             this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
             // 
@@ -64,11 +65,11 @@ namespace ModelManager
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(6, 400);
+            this.label1.Location = new System.Drawing.Point(12, 409);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(296, 18);
+            this.label1.Size = new System.Drawing.Size(109, 18);
             this.label1.TabIndex = 2;
-            this.label1.Text = "请点击按钮，直接在列表中修改模特信息";
+            this.label1.Text = "修改/预览信息";
             // 
             // label2
             // 
@@ -82,7 +83,7 @@ namespace ModelManager
             // 
             // btn_find
             // 
-            this.btn_find.Location = new System.Drawing.Point(236, 442);
+            this.btn_find.Location = new System.Drawing.Point(396, 444);
             this.btn_find.Name = "btn_find";
             this.btn_find.Size = new System.Drawing.Size(159, 54);
             this.btn_find.TabIndex = 4;
@@ -92,7 +93,7 @@ namespace ModelManager
             // 
             // btn_del
             // 
-            this.btn_del.Location = new System.Drawing.Point(650, 442);
+            this.btn_del.Location = new System.Drawing.Point(861, 444);
             this.btn_del.Name = "btn_del";
             this.btn_del.Size = new System.Drawing.Size(124, 54);
             this.btn_del.TabIndex = 5;
@@ -102,23 +103,34 @@ namespace ModelManager
             // 
             // txt_find
             // 
-            this.txt_find.Location = new System.Drawing.Point(415, 460);
+            this.txt_find.Location = new System.Drawing.Point(396, 412);
             this.txt_find.Name = "txt_find";
             this.txt_find.Size = new System.Drawing.Size(129, 22);
             this.txt_find.TabIndex = 6;
             // 
             // txt_del
             // 
-            this.txt_del.Location = new System.Drawing.Point(820, 459);
+            this.txt_del.Location = new System.Drawing.Point(878, 410);
             this.txt_del.Name = "txt_del";
             this.txt_del.Size = new System.Drawing.Size(107, 22);
             this.txt_del.TabIndex = 7;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(352, 415);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(38, 17);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "姓名";
             // 
             // ShowInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1190, 540);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.txt_del);
             this.Controls.Add(this.txt_find);
             this.Controls.Add(this.btn_del);
@@ -147,5 +159,6 @@ namespace ModelManager
         private System.Windows.Forms.Button btn_del;
         private System.Windows.Forms.TextBox txt_find;
         private System.Windows.Forms.TextBox txt_del;
+        private System.Windows.Forms.Label label3;
     }
 }
