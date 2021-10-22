@@ -26,7 +26,7 @@ namespace ModelManager
             dataGridView1.AutoGenerateColumns = true;//自动生成列表
             this.dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter; //设置输入后回车完成
             this.dataGridView1.DataSource = sql.SqlFindAll().Tables[0].DefaultView;//存在图片流无法显示的问题？
-            
+            this.dataGridView1.AllowUserToAddRows = false;
         }
 
         private void btn_update_Click(object sender, EventArgs e)
@@ -91,6 +91,7 @@ namespace ModelManager
             this.dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter; //设置输入后回车完成
             this.dataGridView1.DataSource = sqlfind.SqlFindByName(txt_find.Text).Tables[0].DefaultView;//
             this.dataGridView1.Columns[0].ReadOnly = true;//设置第一列为只读
+            this.dataGridView1.AllowUserToAddRows = false;
         }
 
         //删除选定行
