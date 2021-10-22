@@ -90,33 +90,31 @@ namespace ModelManager
             dataGridView1.AutoGenerateColumns = true;//自动生成列表
             this.dataGridView1.EditMode = DataGridViewEditMode.EditOnEnter; //设置输入后回车完成
             this.dataGridView1.DataSource = sqlfind.SqlFindByName(txt_find.Text).Tables[0].DefaultView;//
-            this.dataGridView1.ReadOnly = !this.dataGridView1.ReadOnly;//只读和修改变换
+            this.dataGridView1.Columns[0].ReadOnly = true;//设置第一列为只读
         }
 
-        //DeleteByID
+        //删除选定行
         private void btn_del_Click(object sender, EventArgs e)
         {
-            try
+           if(dataGridView1.Rows.Count > 0)
             {
-                if (int.Parse(txt_del.Text) > 0)
+                if (MessageBox.Show("是否删除用户", "提示", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+
                 {
-                    //删除数据
-                        int id = int.Parse(txt_del.Text);
-                        SqlCtr sqlDel = new SqlCtr();
-                        sqlDel.DelById(id);
-                        MessageBox.Show("删除成功");
-                }
-                else
-                {
-                    MessageBox.Show("必须是正整数");
+                    //delete
+                    int id = int.Parse(this.dataGridView1.SelectedCells[0].Value.ToString());//选中选定行的第一格
+                    SqlCtr sqlDel = new SqlCtr();
+                    sqlDel.DelById(id);
+                    dataGridView1.Rows.Remove(dataGridView1.CurrentRow);//移除DataGridView中当前行
+                    MessageBox.Show("删除成功");
                 }
             }
-            catch (FormatException)
+            else
             {
-                MessageBox.Show("必须是正整数");
+                MessageBox.Show("请选择一行存在的数据");
             }
             
-            
+
         }
     }
 }
