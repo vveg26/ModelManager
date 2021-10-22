@@ -16,8 +16,9 @@ namespace ModelManager
     {
 
         People people = new People();//定义一个模特类
-
-        string path = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)+"\\"+"Model"+"\\"+"info.txt";//保存模特信息的地址,需要存在
+        //保存文件
+        string txt_dirPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory) + "\\" + "Model";       
+        
         string SNpath = "";//定义一个标识码地址  ，这个地址也要真实存在     
 
 
@@ -36,7 +37,7 @@ namespace ModelManager
 
             if (flag)
             {
-                SaveInfo(path);//保存至txt
+                SaveInfo(txt_dirPath);//保存至txt
                 SqlCtr sqlCtr = new SqlCtr();
                 if (sqlCtr.SqlFindBySN(people.SN))
                 {
@@ -105,7 +106,7 @@ namespace ModelManager
         /// 保存模特信息到指定txt文件中
         /// </summary>
         /// <param name="path">指定txt文件</param>
-        private void SaveInfo(String path)
+        private void SaveInfo(String dirPath)
         {
             //封装进模特类
             people.card_id = txt_cardid.Text;
@@ -120,20 +121,19 @@ namespace ModelManager
 
             //将个人信息保存到txt文件
             string str = "姓名:" + people.name + "证件类型:" + people.card_type + "证件号:" + people.card_id + "证件图片长度:" + people.pic.Length + "地址:" + people.address + "联系方式:" + people.contact + "种族:" + people.race + "标识码:" + people.SN + "\r\n";//将信息组合成字符串            
+
+            string path = dirPath + "\\" + "info.txt";
+            if (!Directory.Exists(dirPath)) {  Directory.CreateDirectory(dirPath); }//创建该文件夹　//如果不存在就创建file文件夹　 　　             　　                                    
             //如果文件不存在，就保存
             if (!File.Exists(path)) { using (System.IO.FileStream fs = System.IO.File.Create(path)) ; }//创建文件
-            StreamWriter sw = File.AppendText(path);
-            sw.Write(str);
-            sw.Close();
+            File.WriteAllText(path, str);
             btn_getSN.Enabled = true;
         }
 
         //生成标识码路径
         private void btn_getSN_Click(object sender, EventArgs e)
-        {
-            string dirPath = Environment.GetFolderPath(Environment.SpecialFolder.DesktopDirectory)+"\\"+"Model";//文件保存目录
-
-            SNpath = dirPath + "\\" + people.SN;//标识码文件夹路径
+        {           
+            SNpath = txt_dirPath + "\\" + people.SN;//标识码文件夹路径
             if (!Directory.Exists(SNpath))
                 Directory.CreateDirectory(SNpath);
             txt_getSN.Text = SNpath;
@@ -177,10 +177,8 @@ namespace ModelManager
             if (!(SNpath == ""))
             {
                 string jsonPath = SNpath + "\\" + "json.json";
-                if (!File.Exists(jsonPath)) { using (System.IO.FileStream fs = System.IO.File.Create(jsonPath)) ; }//createfile
-                StreamWriter sw = File.AppendText(jsonPath);
-                sw.Write(json);
-                sw.Close();
+                if (!File.Exists(jsonPath)) { using(System.IO.FileStream fs = System.IO.File.Create(jsonPath) ); }//createfile
+                File.WriteAllText(jsonPath, json);
             }
             else
             {
@@ -273,14 +271,36 @@ namespace ModelManager
         {
 
         }
-        //创建一个lbl
-        //private void btn_create_line_Click(object sender, EventArgs e)
-        //{
-        //    Label lbl = new Label();//声明一个label
-        //    lbl.Location = new System.Drawing.Point(5, 80);//设置位置
-        //    lbl.Size = new Size(40, 20);//设置大小
-        //    lbl.Text = txt_create_lal.Text;//设置Text值
-        //    this.panel_collection.Controls.Add(lbl);//在当前窗体上添加这个label控件
-        //}
+
+        private void btn_choose_Click(object sender, EventArgs e)
+        {
+            FolderBrowserDialog fbd = new FolderBrowserDialog();
+            if (fbd.ShowDialog() == DialogResult.OK)
+            {
+                txt_jsonPath.Text = fbd.SelectedPath;
+            }
+        }
+
+        private void btn_savetofile_Click(object sender, EventArgs e)
+        {
+            //组合成json
+
+            string json = ToJson(panel_collection);
+            string jsonPath = txt_jsonPath.Text + "\\" + "json.json";
+            //抓异常
+            try
+            {
+                if (!File.Exists(jsonPath)) { using (System.IO.FileStream fs = System.IO.File.Create(jsonPath)) ; }//createfile
+                File.WriteAllText(jsonPath, json);
+            }
+            catch
+            {
+                MessageBox.Show("请选择要保存的路径");
+            }
+                
+   
+
+
+        }
     }
 }

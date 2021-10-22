@@ -128,6 +128,9 @@ namespace ModelManager
             this.rad_skin_yellow = new System.Windows.Forms.RadioButton();
             this.rad_skin_black = new System.Windows.Forms.RadioButton();
             this.label6 = new System.Windows.Forms.Label();
+            this.txt_jsonPath = new System.Windows.Forms.TextBox();
+            this.btn_choose = new System.Windows.Forms.Button();
+            this.btn_savetofile = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pic_pic)).BeginInit();
             this.panel_info.SuspendLayout();
             this.panel_collection.SuspendLayout();
@@ -415,6 +418,9 @@ namespace ModelManager
             // 
             this.panel_collection.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.panel_collection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel_collection.Controls.Add(this.btn_savetofile);
+            this.panel_collection.Controls.Add(this.btn_choose);
+            this.panel_collection.Controls.Add(this.txt_jsonPath);
             this.panel_collection.Controls.Add(this.btn_save_json);
             this.panel_collection.Controls.Add(this.group_wen);
             this.panel_collection.Controls.Add(this.group_hat);
@@ -436,11 +442,11 @@ namespace ModelManager
             // 
             // btn_save_json
             // 
-            this.btn_save_json.Location = new System.Drawing.Point(7, 577);
+            this.btn_save_json.Location = new System.Drawing.Point(3, 599);
             this.btn_save_json.Name = "btn_save_json";
             this.btn_save_json.Size = new System.Drawing.Size(152, 61);
             this.btn_save_json.TabIndex = 23;
-            this.btn_save_json.Text = "保存json数据";
+            this.btn_save_json.Text = "保存";
             this.btn_save_json.UseVisualStyleBackColor = true;
             this.btn_save_json.Click += new System.EventHandler(this.btn_save_json_Click);
             // 
@@ -1222,6 +1228,33 @@ namespace ModelManager
             this.label6.TabIndex = 0;
             this.label6.Text = "数据标识";
             // 
+            // txt_jsonPath
+            // 
+            this.txt_jsonPath.Location = new System.Drawing.Point(203, 599);
+            this.txt_jsonPath.Name = "txt_jsonPath";
+            this.txt_jsonPath.Size = new System.Drawing.Size(162, 22);
+            this.txt_jsonPath.TabIndex = 24;
+            // 
+            // btn_choose
+            // 
+            this.btn_choose.Location = new System.Drawing.Point(371, 589);
+            this.btn_choose.Name = "btn_choose";
+            this.btn_choose.Size = new System.Drawing.Size(72, 33);
+            this.btn_choose.TabIndex = 25;
+            this.btn_choose.Text = "choose";
+            this.btn_choose.UseVisualStyleBackColor = true;
+            this.btn_choose.Click += new System.EventHandler(this.btn_choose_Click);
+            // 
+            // btn_savetofile
+            // 
+            this.btn_savetofile.Location = new System.Drawing.Point(203, 627);
+            this.btn_savetofile.Name = "btn_savetofile";
+            this.btn_savetofile.Size = new System.Drawing.Size(156, 44);
+            this.btn_savetofile.TabIndex = 26;
+            this.btn_savetofile.Text = "保存到文件夹";
+            this.btn_savetofile.UseVisualStyleBackColor = true;
+            this.btn_savetofile.Click += new System.EventHandler(this.btn_savetofile_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1369,6 +1402,9 @@ namespace ModelManager
         private System.Windows.Forms.Label lbl_age;
         private System.Windows.Forms.Label lbl_hair;
         private System.Windows.Forms.Label lbl_emo;
+        private System.Windows.Forms.Button btn_savetofile;
+        private System.Windows.Forms.Button btn_choose;
+        private System.Windows.Forms.TextBox txt_jsonPath;
     }
 }
 

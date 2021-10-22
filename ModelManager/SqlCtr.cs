@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 namespace ModelManager
 {
     class SqlCtr
-    {   //连接数据库
+    {   //连接数据库,存在异常，若连接失败则会导致xxx
         public MySqlConnection SqlConn()
         {
-            string connStr = @"server=localhost;port=3306;user=root;password=root; database=vs_database;";
+            string connStr = @"server=localhost;port=3306;user=root;password=123qweasd; database=vs_database;";
             MySqlConnection conn = new MySqlConnection(connStr);
             return conn;
         }
